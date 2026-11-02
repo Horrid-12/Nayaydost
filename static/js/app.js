@@ -888,7 +888,7 @@ async function analyzeNotice() {
   const text = textarea.value.trim();
   const limit = state.bootstrap ? state.bootstrap.limits.max_text_chars : 50000;
 
-  if (state.inputMode === "upload" && state.selectedFile) {
+  if (state.selectedFile) {
     const form = new FormData();
     form.append("file", state.selectedFile, state.selectedFile.name);
     form.append("language", state.language);
