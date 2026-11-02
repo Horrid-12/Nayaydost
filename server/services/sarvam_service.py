@@ -321,9 +321,17 @@ class SarvamService:
                 warning="There was no text to translate.",
             )
 
-        truncated = len(cleaned) > self.settings.max_translate_chars
+        limit = self.settings.max_translate_chars
+        if self.settings.sarvam_configured:
+            limit = min(
+                limit,
+                self._model_limit(
+                    self.settings.sarvam_translate_model, TRANSLATE_MODEL_LIMITS
+                ),
+            )
+        truncated = len(cleaned) > limit
         if truncated:
-            cleaned = cleaned[: self.settings.max_translate_chars].rstrip()
+            cleaned = cleaned[:limit].rstrip()
 
         if target == "en":
             return TranslationResult(
