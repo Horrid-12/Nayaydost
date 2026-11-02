@@ -162,6 +162,8 @@ app.mount("/static", StaticFiles(directory=settings.static_dir), name="static")
 
 
 @app.get("/", include_in_schema=False)
+@app.get("/guide", include_in_schema=False)
+@app.get("/legal-aid", include_in_schema=False)
 def index() -> FileResponse:
     return FileResponse(
         settings.templates_dir / "index.html",

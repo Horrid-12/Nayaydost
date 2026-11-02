@@ -272,6 +272,17 @@ button {
   right: 0;
 }
 
+.site-nav a.is-active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.site-nav a.is-active::after {
+  right: 0;
+  height: 2px;
+  background: var(--stamp);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -2071,10 +2082,28 @@ textarea::placeholder {
    NyayaGuide
    -------------------------------------------------------------------------- */
 
+/* Page display toggles */
+html[data-page="workspace"] .guide-section,
+html[data-page="workspace"] .aid-section {
+  display: none !important;
+}
+
+html[data-page="guide"] .hero,
+html[data-page="guide"] .workspace,
+html[data-page="guide"] .aid-section {
+  display: none !important;
+}
+
+html[data-page="legal-aid"] .hero,
+html[data-page="legal-aid"] .workspace,
+html[data-page="legal-aid"] .guide-section {
+  display: none !important;
+}
+
 .guide-section,
 .aid-section {
-  padding: 54px 0 30px;
-  border-top: 1px solid var(--rule);
+  padding: 48px 0 36px;
+  border-top: none;
 }
 
 .guide-controls {
@@ -2793,7 +2822,13 @@ textarea::placeholder {
   }
 
   .site-nav {
-    display: none;
+    display: flex;
+    gap: 16px;
+  }
+
+  .site-nav a {
+    font-size: 0.74rem;
+    padding: 4px 0;
   }
 
   .header-actions {
