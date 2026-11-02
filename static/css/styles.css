@@ -1,8 +1,4 @@
-/* ==========================================================================
-   NyayaDost design system
-   Light: archival stamp paper. Dark: an executive legal chamber.
-   No framework, no gradients borrowed from a SaaS landing page.
-   ========================================================================== */
+/* NyayaDost application styles. */
 
 :root {
   --font-display: "Cinzel", "Georgia", "Times New Roman", serif;
@@ -89,22 +85,7 @@ body {
   line-height: 1.6;
   color: var(--ink);
   background-color: var(--bg);
-  background-image:
-    radial-gradient(circle at 8% 12%, rgba(154, 123, 79, 0.06), transparent 28%),
-    radial-gradient(circle at 92% 4%, rgba(139, 30, 30, 0.045), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(154, 123, 79, 0.05), transparent 34%),
-    repeating-linear-gradient(0deg, var(--rule-faint) 0 1px, transparent 1px 5px);
-  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-[data-theme="dark"] body {
-  background-image:
-    radial-gradient(circle at 8% 12%, rgba(197, 168, 128, 0.06), transparent 30%),
-    radial-gradient(circle at 92% 4%, rgba(196, 106, 95, 0.05), transparent 26%),
-    radial-gradient(circle at 50% 100%, rgba(197, 168, 128, 0.04), transparent 36%),
-    repeating-linear-gradient(0deg, var(--rule-faint) 0 1px, transparent 1px 5px);
 }
 
 ::selection {
@@ -178,23 +159,6 @@ button {
   outline-offset: 3px;
 }
 
-.page-grain {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.32;
-  background-image:
-    repeating-linear-gradient(90deg, transparent 0 2px, rgba(15, 29, 54, 0.018) 2px 3px),
-    repeating-linear-gradient(0deg, transparent 0 3px, rgba(15, 29, 54, 0.014) 3px 4px);
-  mix-blend-mode: multiply;
-}
-
-[data-theme="dark"] .page-grain {
-  opacity: 0.18;
-  mix-blend-mode: screen;
-}
-
 /* --------------------------------------------------------------------------
    Header
    -------------------------------------------------------------------------- */
@@ -205,9 +169,7 @@ button {
   z-index: 100;
   height: var(--header-h);
   border-bottom: 1px solid var(--rule);
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: var(--bg);
 }
 
 .header-inner {
@@ -458,18 +420,6 @@ main {
   padding: 26px;
 }
 
-.panel::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--stamp), var(--gold) 42%, transparent 86%);
-  opacity: 0.75;
-  border-radius: var(--radius) var(--radius) 0 0;
-}
-
 .panel-head {
   display: flex;
   align-items: baseline;
@@ -640,11 +590,6 @@ main {
   box-shadow: none;
 }
 
-.button-stamp {
-  font-size: 1rem;
-  line-height: 1;
-}
-
 .text-button {
   padding: 0;
   border: 0;
@@ -714,12 +659,7 @@ textarea {
   font-size: 0.94rem;
   line-height: 1.72;
   resize: vertical;
-  background-color: var(--surface-2);
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent 0 30px,
-    var(--rule-faint) 30px 31px
-  );
+  background: var(--surface-2);
 }
 
 input[type="text"]:focus,
@@ -830,14 +770,11 @@ textarea::placeholder {
 }
 
 .hero-seal-card {
-  position: relative;
   padding: 26px 26px 22px;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
-  background:
-    linear-gradient(145deg, var(--surface), var(--surface-2));
+  background: var(--surface);
   box-shadow: var(--shadow-panel);
-  transform: rotate(0.5deg);
 }
 
 .hero-seal-card::before {
@@ -859,11 +796,9 @@ textarea::placeholder {
   border: 2px solid var(--stamp);
   border-radius: 50%;
   color: var(--stamp);
-  transform: rotate(-5deg);
   box-shadow:
     inset 0 0 0 5px var(--surface),
-    inset 0 0 0 6px var(--stamp-soft),
-    0 10px 26px -20px rgba(139, 30, 30, 0.65);
+    inset 0 0 0 6px var(--stamp-soft);
 }
 
 .seal-ring {
@@ -880,12 +815,6 @@ textarea::placeholder {
   align-items: center;
   gap: 2px;
   text-align: center;
-}
-
-.seal-scales {
-  font-size: 2rem;
-  line-height: 1;
-  margin-bottom: 4px;
 }
 
 .seal-title {
@@ -1029,66 +958,6 @@ textarea::placeholder {
   color: var(--ink-muted);
 }
 
-.sample-block {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px dashed var(--rule);
-}
-
-.sample-list {
-  display: grid;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.sample-card {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px 12px;
-  align-items: center;
-  padding: 10px 12px;
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--gold);
-  border-radius: var(--radius);
-  background: var(--surface);
-  transition: border-color 0.16s ease, background 0.16s ease, transform 0.16s ease;
-}
-
-.sample-card:hover {
-  border-left-color: var(--stamp);
-  background: var(--surface-2);
-  transform: translateX(2px);
-}
-
-.sample-type {
-  grid-column: 1 / -1;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--stamp);
-}
-
-.sample-title {
-  margin: 0;
-  font-family: var(--font-legal);
-  font-size: 0.86rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.sample-desc {
-  grid-column: 1 / -1;
-  margin: 0;
-  font-size: 0.72rem;
-  line-height: 1.4;
-  color: var(--ink-muted);
-}
-
-.sample-load {
-  grid-row: 2;
-  grid-column: 2;
-}
 
 .dropzone {
   display: flex;
@@ -1116,24 +985,12 @@ textarea::placeholder {
   transform: translateY(-1px);
 }
 
-.dropzone-icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 4px;
-  border: 1px solid var(--stamp);
-  border-radius: 50%;
-  color: var(--stamp);
-  font-size: 1.3rem;
-}
-
 .dropzone strong {
   font-family: var(--font-legal);
   font-size: 1rem;
 }
 
-.dropzone > span:not(.dropzone-icon):not(.dropzone-hint) {
+.dropzone > span:not(.dropzone-hint) {
   font-size: 0.78rem;
   color: var(--ink-muted);
 }
@@ -1414,14 +1271,16 @@ textarea::placeholder {
 }
 
 .processing-stages li.is-done .stage-mark::after {
-  content: "✓";
+  content: "";
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: var(--surface);
-  font-size: 0.7rem;
-  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 5px;
+  margin: -4px 0 0 -5px;
+  border-left: 2px solid var(--surface);
+  border-bottom: 2px solid var(--surface);
+  transform: rotate(-45deg);
 }
 
 .processing-stages strong {
@@ -1957,14 +1816,16 @@ textarea::placeholder {
 }
 
 .step-check:checked::after {
-  content: "✓";
+  content: "";
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: var(--surface);
-  font-size: 0.7rem;
-  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 5px;
+  margin: -4px 0 0 -5px;
+  border-left: 2px solid var(--surface);
+  border-bottom: 2px solid var(--surface);
+  transform: rotate(-45deg);
 }
 
 .step-body {
@@ -2655,13 +2516,6 @@ textarea::placeholder {
   background: var(--surface);
 }
 
-.trust-strip span {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--stamp);
-  font-size: 1rem;
-}
-
 .trust-strip strong {
   display: block;
   font-size: 0.72rem;
@@ -3144,7 +2998,6 @@ textarea::placeholder {
     font-size: 11pt;
   }
 
-  .page-grain,
   .site-header,
   .hero,
   .input-panel,

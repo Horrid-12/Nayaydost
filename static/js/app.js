@@ -424,7 +424,8 @@ function languageName(code) {
 }
 
 function renderSamples() {
-  const list = byId("sample-list");
+  const list = document.getElementById("sample-list");
+  if (!list) return;
   list.textContent = "";
   if (!state.bootstrap || !state.bootstrap.samples.length) {
     const note = el("p", "field-hint", "Samples are unavailable right now. Paste your notice instead.");
@@ -933,7 +934,7 @@ async function analyzeNotice() {
   if (text.length < 30) {
     showInputError(
       "Please add at least a few lines of the notice.",
-      "Paste the text, upload a PDF, or load a sample. Thirty characters is the minimum."
+      "Paste the text or upload a PDF. Thirty characters is the minimum."
     );
     showToast("Add the notice text first.", "error");
     return;
