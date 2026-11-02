@@ -37,32 +37,37 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0d1117;
-  --bg-deep: #0a0e13;
-  --surface: #141b24;
-  --surface-2: #18212c;
-  --surface-3: #1d2733;
-  --ink: #e6edf3;
-  --ink-soft: #c3ccd6;
-  --ink-muted: #8b98a8;
-  --rule: #2a3441;
-  --rule-strong: #3d4a5c;
-  --rule-faint: rgba(230, 237, 243, 0.06);
-  --stamp: #c46a5f;
-  --stamp-deep: #d98a7f;
-  --stamp-soft: rgba(196, 106, 95, 0.13);
-  --gold: #c5a880;
-  --gold-soft: rgba(197, 168, 128, 0.14);
-  --ok: #74b795;
-  --ok-soft: rgba(116, 183, 149, 0.12);
-  --warn: #d6a35c;
-  --warn-soft: rgba(214, 163, 92, 0.13);
-  --danger: #e07a6e;
-  --danger-soft: rgba(224, 122, 110, 0.12);
-  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 28px 54px -40px rgba(0, 0, 0, 0.9);
-  --shadow-lift: 0 22px 42px -30px rgba(0, 0, 0, 0.85);
-  --focus: 0 0 0 3px rgba(197, 168, 128, 0.3);
+  --bg: #140e0a;
+  --bg-deep: #0d0805;
+  --surface: #1e1510;
+  --surface-2: #281d16;
+  --surface-3: #34261d;
+  --ink: #fdf6ed;
+  --ink-soft: #e2d2be;
+  --ink-muted: #a69380;
+  --rule: #3c2a1e;
+  --rule-strong: #593f2d;
+  --rule-faint: rgba(253, 246, 237, 0.08);
+  --stamp: #e06c4b;
+  --stamp-deep: #eb7c5e;
+  --stamp-soft: rgba(224, 108, 75, 0.18);
+  --gold: #e6b76c;
+  --gold-soft: rgba(230, 183, 108, 0.18);
+  --ok: #5bb988;
+  --ok-soft: rgba(91, 185, 136, 0.15);
+  --warn: #f0a348;
+  --warn-soft: rgba(240, 163, 72, 0.16);
+  --danger: #e86458;
+  --danger-soft: rgba(232, 100, 88, 0.16);
+  --shadow-panel: 0 1px 0 rgba(253, 246, 237, 0.05) inset, 0 24px 50px -28px rgba(7, 4, 2, 0.95);
+  --shadow-lift: 0 20px 40px -25px rgba(7, 4, 2, 0.9);
+  --focus: 0 0 0 3px rgba(230, 183, 108, 0.35);
   color-scheme: dark;
+}
+
+[data-theme="dark"] ::selection {
+  background: var(--gold);
+  color: #140e0a;
 }
 
 *,
@@ -288,36 +293,6 @@ button {
   align-items: center;
   gap: 14px;
   margin-left: 8px;
-}
-
-.mode-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 5px 10px;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  background: var(--surface);
-  white-space: nowrap;
-}
-
-.mode-chip::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--warn);
-  box-shadow: 0 0 0 3px var(--warn-soft);
-}
-
-.mode-chip.is-live::before {
-  background: var(--ok);
-  box-shadow: 0 0 0 3px var(--ok-soft);
 }
 
 .theme-toggle {
@@ -569,7 +544,15 @@ main {
 }
 
 [data-theme="dark"] .button.primary {
-  color: #10161d;
+  color: #140e0a;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+[data-theme="dark"] .button.primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #140e0a;
 }
 
 .button.primary:hover {
@@ -2841,9 +2824,6 @@ html[data-page="legal-aid"] .guide-section {
     font-size: 0.98rem;
   }
 
-  .mode-chip {
-    display: none;
-  }
 
   .hero {
     padding: 38px 0 36px;

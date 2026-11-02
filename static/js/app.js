@@ -327,7 +327,7 @@ function applyTheme(theme) {
 
   const metas = document.querySelectorAll('meta[name="theme-color"]');
   metas.forEach((meta) => {
-    meta.setAttribute("content", next === "dark" ? "#0D1117" : "#FBF9F4");
+    meta.setAttribute("content", next === "dark" ? "#140E0A" : "#FBF9F4");
   });
 
   if (state.audio.peaks.length) drawWaveform(state.audio.peaks);
@@ -366,10 +366,12 @@ function populateSelect(select, options, selected) {
 function applyBootstrap(data) {
   state.bootstrap = data;
 
-  const modeChip = byId("mode-chip");
-  modeChip.textContent = data.mode === "live" ? "Sarvam live" : "Offline demo";
-  modeChip.classList.toggle("is-live", data.mode === "live");
-  modeChip.removeAttribute("hidden");
+  const modeChip = document.getElementById("mode-chip");
+  if (modeChip) {
+    modeChip.textContent = data.mode === "live" ? "Sarvam live" : "Offline demo";
+    modeChip.classList.toggle("is-live", data.mode === "live");
+    modeChip.removeAttribute("hidden");
+  }
 
   setText("footer-mode", data.mode === "live" ? "Sarvam live" : "Offline demo · local rulebook");
   setText("footer-version", "v" + data.version);
