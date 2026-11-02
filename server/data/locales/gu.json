@@ -1,0 +1,249 @@
+{
+  "code": "gu",
+  "english_name": "Gujarati",
+  "native_name": "ગુજરાતી",
+  "tts_lang": "gu-IN",
+  "labels": {
+    "summary": "આ નોટિસનો અર્થ",
+    "deadlines": "મહત્વપૂર્ણ સમયમર્યાદા",
+    "steps": "તાત્કાલિક આગળના પગલાં",
+    "original": "મૂળ કાનૂની ભાષા",
+    "breakdown": "નાગરિક માટે સરળ ભાષા",
+    "glossary": "કાનૂની શબ્દો, સરળ ભાષામાં",
+    "reply": "જવાબનો ડ્રાફ્ટ",
+    "audio": "આ સમજૂતી સાંભળો",
+    "response_deadline": "તમારા જવાબની અંતિમ તારીખ",
+    "statutory_deadline": "સંબંધિત કાનૂની સમયમર્યાદા",
+    "estimated": "પ્રાપ્તિથી અંદાજિત",
+    "stated": "નોટિસમાં જણાવેલ તારીખ",
+    "days_left": "{days} દિવસ બાકી",
+    "due_today": "આજે અંતિમ દિવસ",
+    "overdue": "સમયમર્યાદા પૂરી થઈ ગઈ",
+    "respond_immediately": "તરત જ જવાબ આપો",
+    "checklist_progress": "{total}માંથી {done} પગલાં પૂર્ણ",
+    "notice_type": "નોટિસનો પ્રકાર",
+    "confidence": "મેળની વિશ્વસનીયતા",
+    "sender": "મોકલનાર",
+    "amount": "ઉલ્લેખિત રકમ",
+    "notice_date": "નોટિસની તારીખ",
+    "source": "સ્રોત",
+    "facts": "મુખ્ય તથ્યો",
+    "legal_basis": "કાનૂની આધાર",
+    "offline_badge": "ઑફલાઇન ડેમો",
+    "date_clause": "{date} સુધીમાં લેખિત જવાબ આપો.",
+    "date_clause_none": "જવાબની સ્પષ્ટ તારીખ આપવામાં આવી નથી. નોટિસ મળ્યાના 15 દિવસને તમારી કાર્યકારી મર્યાદા ગણો.",
+    "sender_unknown": "પ્રેષક",
+    "disclaimer": "ન્યાયદોસ્ત દસ્તાવેજોને સરળ ભાષામાં સમજાવે છે. તે વકીલ કે કાનૂની ફર્મ નથી અને કાનૂની સલાહ આપતું નથી. મહત્વપૂર્ણ પગલાં લેતા પહેલા લાયક વકીલ અથવા જિલ્લા કાનૂની સેવા સત્તામંડળ સાથે ચકાસો.",
+    "reply_note": "આ ફક્ત શરૂઆતનો ડ્રાફ્ટ છે, કાનૂની સલાહ નથી. ખાલી જગ્યાઓ ભરો અને મોકલતા પહેલા વકીલ પાસે ચકાસાવો. ટપાલ રસીદ અને પહોંચનો પુરાવો સાચવો."
+  },
+  "common_steps": [
+    {
+      "title": "સમયમર્યાદા પહેલા લેખિત જવાબ આપો",
+      "detail": "સ્પષ્ટ અને નમ્ર લેખિત જવાબ મોકલો. તમારી પાસે એક નકલ અને મોકલ્યાનો પુરાવો રાખો."
+    },
+    {
+      "title": "રજિસ્ટર્ડ અથવા સ્પીડ પોસ્ટથી મોકલો",
+      "detail": "ઔપચારિક નોટિસનો જવાબ ફક્ત વોટ્સએપ કે ફોન પર ન આપો. ટપાલ રસીદ અને ટ્રેકિંગ નંબર સાચવો."
+    },
+    {
+      "title": "તમારા દસ્તાવેજો એકઠા કરો",
+      "detail": "કરાર, રસીદો, ચેક, બેંક મેમો અથવા ચુકવણીના પુરાવાની નકલો જોડો. મૂળ દસ્તાવેજો ન મોકલો."
+    },
+    {
+      "title": "નોટિસને અવગણો નહીં, દબાણમાં સહી કરો નહીં",
+      "detail": "નોટિસ અવગણવાથી કેસ થઈ શકે છે. કોરા કાગળો પર સહી કરો નહીં અને જે રકમ તમારે નથી ચૂકવવી તે ચૂકવવાનું કબૂલો નહીં."
+    },
+    {
+      "title": "જરૂર પડે તો મફત કાનૂની સહાય લો",
+      "detail": "NALSAની 15100 હેલ્પલાઇન પર કૉલ કરો અથવા તમારા જિલ્લા કાનૂની સેવા સત્તામંડળ (DLSA)નો સંપર્ક કરો."
+    }
+  ],
+  "summary_frame": "આ નોટિસ {topic} સંબંધિત છે. {sender}ના મતે, {allegation}. {date_clause} જો તમે જવાબ નહીં આપો, તો {consequence}.",
+  "glossary": {
+    "legal_notice": {
+      "term": "Legal notice",
+      "meaning": "કાનૂની કાર્યવાહી શરૂ કરતા પહેલા મોકલવામાં આવતી ઔપચારિક લેખિત ચેતવણી."
+    },
+    "statutory_notice": {
+      "term": "Statutory notice",
+      "meaning": "કાયદામાં નક્કી કરેલા સમયમાં મોકલવી ફરજિયાત હોય એવી નોટિસ."
+    },
+    "cheque_dishonour": {
+      "term": "Cheque dishonour",
+      "meaning": "જ્યારે બેંક ચેકનું ભુક્તાન ન કરે, જેમ કે ખાતામાં પૂરતા પૈસા ન હોય ત્યારે."
+    },
+    "demand_notice": {
+      "term": "Demand notice",
+      "meaning": "પૈસા કે ચોક્કસ કામની માંગ કરતી ઔપચારિક નોટિસ."
+    },
+    "registered_post": {
+      "term": "Registered post",
+      "meaning": "પહોંચનો લેખિત પુરાવો આપતી ટપાલ સેવા."
+    },
+    "affidavit": {
+      "term": "Affidavit",
+      "meaning": "સોગંદનામું; સોગંદ લઈને આપેલું લેખિત નિવેદન."
+    },
+    "injunction": {
+      "term": "Injunction",
+      "meaning": "કોઈ કામ કરવાથી કે ચાલુ રાખવાથી રોકતો અદાલતનો હુકમ."
+    },
+    "limitation_period": {
+      "term": "Limitation period",
+      "meaning": "કેસ કે અપીલ દાખલ કરવાની કાનૂની સમયમર્યાદા."
+    },
+    "tenancy": {
+      "term": "Tenancy",
+      "meaning": "ભાડે મિલકત રાખવાનો કાનૂની સંબંધ."
+    },
+    "maintenance": {
+      "term": "Maintenance",
+      "meaning": "પરિવારના સભ્યના ભરણપોષણ માટે આપવામાં આવતી રકમ."
+    },
+    "sarfaesi": {
+      "term": "SARFAESI",
+      "meaning": "તારણ ધિરાણની વસૂલાતનો કાયદો; બેંક કડક નિયમો સાથે તારણ મિલકત વેચી શકે છે."
+    },
+    "arbitration": {
+      "term": "Arbitration",
+      "meaning": "અદાલતની બહાર તટસ્થ મધ્યસ્થ દ્વારા વિવાદ ઉકેલવાની પ્રક્રિયા."
+    },
+    "consumer_protection": {
+      "term": "Consumer protection",
+      "meaning": "ખરાબ માલ કે સેવા અને અન્યાયી વ્યાપારથી ગ્રાહકોને બચાવતા કાયદા."
+    },
+    "e_daakhil": {
+      "term": "e-Daakhil",
+      "meaning": "ગ્રાહક ફરિયાદ ઓનલાઇન દાખલ કરવાનું સરકારી પોર્ટલ."
+    },
+    "title_deed": {
+      "term": "Title deed",
+      "meaning": "મિલકતની માલિકીનો કાનૂની દસ્તાવેજ."
+    },
+    "assessment": {
+      "term": "Assessment",
+      "meaning": "કર વિભાગ દ્વારા આવક અને લાગતા કરની ચકાસણીની પ્રક્રિયા."
+    }
+  },
+  "notices": {
+    "cheque_bounce": {
+      "label": "ચેક બાઉન્સ નોટિસ",
+      "statute": "Section 138, Negotiable Instruments Act, 1881",
+      "topic": "બેંકે પરત મોકલેલો ચેક",
+      "allegation": "તમે આપેલો ચેક બેંકે અસ્વીકાર્યો અને રકમ હજુ ચૂકવાઈ નથી",
+      "consequence": "ફરિયાદકર્તા પરક્રામ્ય લેખ અધિનિયમ, 1881ની કલમ 138 હેઠળ ફોજદારી ફરિયાદ દાખલ કરી શકે છે",
+      "deadline_label": "ચેકની રકમ ચૂકવો અથવા લેખિત જવાબ મોકલો",
+      "secondary_label": "ફરિયાદકર્તાની ફોજદારી ફરિયાદની સમયમર્યાદા આશરે આ તારીખ સુધી",
+      "secondary_offset_days": 30,
+      "default_days": 15,
+      "severity": "critical",
+      "extra_step_title": "બેંકનો ચેક રિટર્ન મેમો તપાસો",
+      "extra_step_detail": "તમારી બેંક પાસેથી ચેક રિટર્ન મેમો મેળવો. કારણ (પૂરતા ભંડોળ નથી, સ્ટોપ પેમેન્ટ, સહી મેળ ખાતી નથી) અને ચેક પરત થયાની તારીખ ચકાસો.",
+      "glossary_keys": ["cheque_dishonour", "statutory_notice", "demand_notice", "registered_post"]
+    },
+    "rent_eviction": {
+      "label": "ભાડું / બહાર કાઢવાની નોટિસ",
+      "statute": "State rent control law and Transfer of Property Act, 1882",
+      "topic": "તમારો ભાડાકીય સંબંધ અને જગ્યા ખાલી કરવાની માંગ",
+      "allegation": "તમે ભાડું ચૂકવ્યું નથી અથવા તમને ભાડાની જગ્યા ખાલી કરવા કહેવામાં આવી રહ્યું છે",
+      "consequence": "મકાનમાલિક દીવાની અદાલતમાં બહાર કાઢવાનો કે વસૂલાતનો દાવો દાખલ કરી શકે છે",
+      "deadline_label": "મકાનમાલિકને જવાબ આપો અથવા માંગ મુજબ જગ્યા ખાલી કરો",
+      "default_days": 30,
+      "severity": "warning",
+      "extra_step_title": "તમારો ભાડા કરાર અને ચુકવણીની રસીદો તપાસો",
+      "extra_step_detail": "નોટિસની મુદતને તમારા ભાડા કરાર અને રાજ્યના ભાડા કાયદા સાથે સરખાવો. બેંક સ્ટેટમેન્ટ, ભાડા રસીદો અને ચુકવણીના સંદેશા સાચવો.",
+      "glossary_keys": ["tenancy", "legal_notice", "registered_post"]
+    },
+    "loan_recovery": {
+      "label": "લોન વસૂલાત નોટિસ",
+      "statute": "RBI recovery norms, SARFAESI Act, 2002 and civil law",
+      "topic": "બાકી લોન અથવા EMI",
+      "allegation": "લોન અથવા EMIનો હપ્તો બાકી છે અને ધિરાણકર્તા ચુકવણીની માંગ કરી રહ્યું છે",
+      "consequence": "ધિરાણકર્તા વસૂલાત કાર્યવાહી, લવાદ કે દીવાની દાવો શરૂ કરી શકે છે; તારણ લોનમાં SARFAESI હેઠળ કાર્યવાહી થઈ શકે છે",
+      "deadline_label": "ધિરાણકર્તાની માંગનો જવાબ આપો",
+      "default_days": 15,
+      "severity": "critical",
+      "extra_step_title": "સંપૂર્ણ હિસાબની વિગત માંગો",
+      "extra_step_detail": "મૂળ રકમ, વ્યાજ, દંડ અને અત્યાર સુધીની ચુકવણી દર્શાવતી લેખિત વિગત માંગો. વસૂલાત એજન્ટ ધિરાણકર્તા દ્વારા અધિકૃત છે કે નહીં તે તપાસો.",
+      "glossary_keys": ["sarfaesi", "arbitration", "registered_post"]
+    },
+    "consumer": {
+      "label": "ગ્રાહક ફરિયાદ નોટિસ",
+      "statute": "Consumer Protection Act, 2019",
+      "topic": "ખામીયુક્ત ઉત્પાદન અથવા અધૂરી સેવા",
+      "allegation": "તમે જે ઉત્પાદન કે સેવાના પૈસા આપ્યા તે ખામીયુક્ત કે અધૂરી હતી અને વિક્રેતાએ ઉકેલ આપ્યો નથી",
+      "consequence": "ગ્રાહક ગ્રાહક સુરક્ષા અધિનિયમ, 2019 હેઠળ જિલ્લા ગ્રાહક આયોગમાં ફરિયાદ દાખલ કરી શકે છે",
+      "deadline_label": "ગ્રાહકની માંગનો જવાબ આપો",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "બિલ, વોરંટી અને ફરિયાદના રેકોર્ડ એકઠા કરો",
+      "extra_step_detail": "બિલ, વોરંટી કાર્ડ, ઉત્પાદનના ફોટા કે વિડિયો, સર્વિસ ટિકિટ અને ફરિયાદ કરેલા ઈમેલ કે ચેટ સાચવો.",
+      "glossary_keys": ["consumer_protection", "e_daakhil", "legal_notice"]
+    },
+    "maintenance": {
+      "label": "ભરણપોષણ / કૌટુંબિક નોટિસ",
+      "statute": "Section 144, BNSS, 2023 and applicable family law",
+      "topic": "પરિવારના સભ્યના ભરણપોષણ અથવા આર્થિક સહાય",
+      "allegation": "પ્રેષકના મતે કાયદેસર રીતે લાગતું ભરણપોષણ કે સહાય તમે આપ્યું નથી",
+      "consequence": "પ્રેષક BNSS, 2023ની કલમ 144 અથવા લાગુ કૌટુંબિક કાયદા હેઠળ ભરણપોષણનો દાવો દાખલ કરી શકે છે",
+      "deadline_label": "ભરણપોષણની માંગનો જવાબ આપો",
+      "default_days": 15,
+      "severity": "critical",
+      "extra_step_title": "આવક, ખર્ચ અને કૌટુંબિક દસ્તાવેજો એકઠા કરો",
+      "extra_step_detail": "પગાર પરચી, બેંક સ્ટેટમેન્ટ, ભાડું અને શાળા ફીની રસીદો અને જૂનો અદાલતી હુકમ રાખો. સંબંધ તૂટ્યો હોય તો પણ જવાબ આપવાનું બંધ ન કરો.",
+      "glossary_keys": ["maintenance", "legal_notice", "statutory_notice"]
+    },
+    "property": {
+      "label": "મિલકત / કબજા નોટિસ",
+      "statute": "Transfer of Property Act, 1882 and Specific Relief Act, 1963",
+      "topic": "મિલકતની માલિકી, કબજો અથવા સીમાનો વિવાદ",
+      "allegation": "પ્રેષક જે મિલકત પર દાવો કરે છે ત્યાં તમે કબજો રાખો છો, અતિક્રમણ કરો છો અથવા દખલ કરો છો",
+      "consequence": "પ્રેષક કબજો, મનાઈહુકમ કે ઘોષણા માટે દીવાની દાવો દાખલ કરી શકે છે",
+      "deadline_label": "મિલકતના દાવાનો જવાબ આપો",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "માલિકીની સાંકળ અને સર્વે રેકોર્ડ તપાસો",
+      "extra_step_detail": "વેચાણખત, નોંધણી નોંધ, મિલકત વેરાની રસીદો, સર્વે નકશો અને ફોટા એકઠા કરો. લેખિત સલાહ વિના કોઈ દસ્તાવેજ છોડો નહીં કે કબજો આપો નહીં.",
+      "glossary_keys": ["title_deed", "injunction", "legal_notice"]
+    },
+    "employment": {
+      "label": "રોજગાર / પગાર નોટિસ",
+      "statute": "Industrial Disputes Act, 1947 and state labour law",
+      "topic": "બાકી પગાર, નોકરીમાંથી કાઢી મૂકવું અથવા રોજગારનો વિવાદ",
+      "allegation": "તમારા નિયોક્તા કે કર્મચારીએ પગાર, નોટિસ સમયગાળો કે નોકરી સમાપ્તિની જવાબદારી પૂરી કરી નથી",
+      "consequence": "બીજો પક્ષ શ્રમ આયુક્ત કે ઔદ્યોગિક અધિકરણ પાસે જઈ શકે છે",
+      "deadline_label": "રોજગારની માંગનો જવાબ આપો",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "તમારા રોજગારનો તારીખવાર રેકોર્ડ બનાવો",
+      "extra_step_detail": "નિમણૂક પત્ર, પગાર પરચી, હાજરી રેકોર્ડ, ઈમેલ અને નોકરી સમાપ્તિ કે રાજીનામાનો પત્ર રાખો. દરેક બાકી રકમ અને તારીખ નોંધો.",
+      "glossary_keys": ["legal_notice", "registered_post", "affidavit"]
+    },
+    "tax": {
+      "label": "કર વિભાગની નોટિસ",
+      "statute": "Income-tax Act, 1961 and GST law",
+      "topic": "આવકવેરા અથવા GST નોટિસ",
+      "allegation": "કર વિભાગે તમારા રિટર્ન અંગે વિસંગતિ, માંગ કે માહિતી માંગી છે",
+      "consequence": "વિભાગ નિર્ધારણ પૂરું કરી શકે, વ્યાજ કે દંડ લગાવી શકે, અથવા કેસ ફરી ખોલી શકે",
+      "deadline_label": "કર પોર્ટલ પર જવાબ આપો",
+      "default_days": 30,
+      "severity": "critical",
+      "extra_step_title": "સત્તાવાર કર પોર્ટલમાં લોગિન કરો",
+      "extra_step_detail": "ઈ-ફાઇલિંગ પોર્ટલ ખોલીને નોટિસ અને તેના પરિશિષ્ટ વાંચો. નિર્ધારણ વર્ષ, કલમ અને જવાબની તારીખ તપાસો. સત્તાવાર પોર્ટલ પર ચકાસ્યા વિના કોઈ માંગ ચૂકવો નહીં.",
+      "glossary_keys": ["assessment", "limitation_period", "legal_notice"]
+    },
+    "generic": {
+      "label": "કાનૂની નોટિસ",
+      "statute": "General civil and criminal law",
+      "topic": "કોઈ કાનૂની દાવો કે માંગ",
+      "allegation": "પ્રેષક કહે છે કે તમારે પૈસા આપવાના છે, કંઈક કરવાનું છે અથવા કંઈક બંધ કરવાનું છે",
+      "consequence": "પ્રેષક કેસ કે બીજી કાનૂની કાર્યવાહી શરૂ કરી શકે છે",
+      "deadline_label": "લેખિત જવાબ મોકલો",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "પ્રેષક અને ચોક્કસ માંગ ઓળખો",
+      "extra_step_detail": "નોટિસ બે વાર વાંચો. કોણે મોકલી, શું માંગ્યું, તારીખ, રકમ અને કયા દસ્તાવેજોનો ઉલ્લેખ છે તે લખો. ફક્ત ફોન પર જવાબ ન આપો.",
+      "glossary_keys": ["legal_notice", "statutory_notice", "registered_post"]
+    }
+  }
+}

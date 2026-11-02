@@ -1,0 +1,249 @@
+{
+  "code": "en",
+  "english_name": "English",
+  "native_name": "English",
+  "tts_lang": "en-IN",
+  "labels": {
+    "summary": "What This Notice Means",
+    "deadlines": "Critical Deadlines",
+    "steps": "Immediate Next Steps",
+    "original": "Original Legalese",
+    "breakdown": "Citizen Breakdown",
+    "glossary": "Legal Terms, Decoded",
+    "reply": "Reply Draft",
+    "audio": "Listen to this explanation",
+    "response_deadline": "Your response deadline",
+    "statutory_deadline": "Related legal window",
+    "estimated": "Estimated from receipt",
+    "stated": "Stated in the notice",
+    "days_left": "{days} days left",
+    "due_today": "Due today",
+    "overdue": "Deadline has passed",
+    "respond_immediately": "Respond immediately",
+    "checklist_progress": "{done} of {total} steps completed",
+    "notice_type": "Notice type",
+    "confidence": "Match confidence",
+    "sender": "Sender",
+    "amount": "Amount mentioned",
+    "notice_date": "Notice date",
+    "source": "Source",
+    "facts": "Key facts",
+    "legal_basis": "Legal basis",
+    "offline_badge": "Offline demo",
+    "date_clause": "Reply by {date}.",
+    "date_clause_none": "No clear reply date is given. Treat 15 days from receipt as your working deadline.",
+    "sender_unknown": "The sender",
+    "disclaimer": "NyayaDost explains documents in plain language. It is not a law firm and does not give legal advice. Verify important steps with a licensed advocate or your District Legal Services Authority.",
+    "reply_note": "This is a starting draft, not legal advice. Fill in the blanks and have it checked before sending. Keep the postal receipt and proof of delivery."
+  },
+  "common_steps": [
+    {
+      "title": "Reply in writing before the deadline",
+      "detail": "Send a clear, polite written reply. Keep a copy for yourself and proof that you sent it."
+    },
+    {
+      "title": "Use registered post or speed post",
+      "detail": "Do not rely only on WhatsApp or a phone call for a formal notice. Keep the postal receipt and tracking number."
+    },
+    {
+      "title": "Gather your documents",
+      "detail": "Attach copies, never originals, of the agreement, receipts, cheque, bank memo, or payment proof."
+    },
+    {
+      "title": "Do not ignore the notice or sign under pressure",
+      "detail": "Ignoring a notice can lead to a case. Do not sign blank papers or agree to a payment you do not owe."
+    },
+    {
+      "title": "Get free legal help if you need it",
+      "detail": "Call the NALSA helpline at 15100 or contact your District Legal Services Authority (DLSA)."
+    }
+  ],
+  "summary_frame": "This notice is about {topic}. According to {sender}, {allegation}. {date_clause} If you do not respond, {consequence}.",
+  "glossary": {
+    "legal_notice": {
+      "term": "Legal notice",
+      "meaning": "A formal written warning sent before starting a legal case."
+    },
+    "statutory_notice": {
+      "term": "Statutory notice",
+      "meaning": "A notice that a law requires a person to send within a fixed time."
+    },
+    "cheque_dishonour": {
+      "term": "Cheque dishonour",
+      "meaning": "When a bank refuses to pay a cheque, for example because the account has insufficient funds."
+    },
+    "demand_notice": {
+      "term": "Demand notice",
+      "meaning": "A formal notice asking for money or for a specific action."
+    },
+    "registered_post": {
+      "term": "Registered post",
+      "meaning": "A postal service that gives written proof of delivery."
+    },
+    "affidavit": {
+      "term": "Affidavit",
+      "meaning": "A written statement sworn on oath, usually used as evidence."
+    },
+    "injunction": {
+      "term": "Injunction",
+      "meaning": "A court order that stops a person from doing something or requires them to do it."
+    },
+    "limitation_period": {
+      "term": "Limitation period",
+      "meaning": "The legal time limit for filing a case or appeal."
+    },
+    "tenancy": {
+      "term": "Tenancy",
+      "meaning": "The legal relationship created when a person occupies property for rent."
+    },
+    "maintenance": {
+      "term": "Maintenance",
+      "meaning": "Money paid for the financial support of a family member."
+    },
+    "sarfaesi": {
+      "term": "SARFAESI",
+      "meaning": "A law that lets a secured lender enforce security without going to court first, subject to strict rules."
+    },
+    "arbitration": {
+      "term": "Arbitration",
+      "meaning": "A dispute resolution process decided by a neutral arbitrator outside court."
+    },
+    "consumer_protection": {
+      "term": "Consumer protection",
+      "meaning": "Laws that protect buyers of goods and services from defects and unfair practices."
+    },
+    "e_daakhil": {
+      "term": "e-Daakhil",
+      "meaning": "The official portal for filing consumer complaints online."
+    },
+    "title_deed": {
+      "term": "Title deed",
+      "meaning": "A legal document that shows ownership of property."
+    },
+    "assessment": {
+      "term": "Assessment",
+      "meaning": "The tax department's process of checking your income and deciding the tax due."
+    }
+  },
+  "notices": {
+    "cheque_bounce": {
+      "label": "Cheque Bounce Notice",
+      "statute": "Section 138, Negotiable Instruments Act, 1881",
+      "topic": "a cheque that your bank returned unpaid",
+      "allegation": "a cheque you issued was dishonoured by the bank, and the amount remains unpaid",
+      "consequence": "the complainant may file a criminal complaint under Section 138 of the Negotiable Instruments Act, 1881",
+      "deadline_label": "Pay the cheque amount or send a written reply",
+      "secondary_label": "The complainant's criminal complaint window closes around this date",
+      "secondary_offset_days": 30,
+      "default_days": 15,
+      "severity": "critical",
+      "extra_step_title": "Check the bank return memo",
+      "extra_step_detail": "Ask your bank for the cheque return memo. Confirm the reason (insufficient funds, stop payment, signature mismatch) and the date the cheque was returned.",
+      "glossary_keys": ["cheque_dishonour", "statutory_notice", "demand_notice", "registered_post"]
+    },
+    "rent_eviction": {
+      "label": "Rent / Eviction Notice",
+      "statute": "State rent control law and Transfer of Property Act, 1882",
+      "topic": "your tenancy and a demand to vacate the premises",
+      "allegation": "you have defaulted on rent or are being asked to vacate the rented premises",
+      "consequence": "the landlord may file an eviction suit or a recovery case before the civil court",
+      "deadline_label": "Reply to the landlord or vacate as demanded",
+      "default_days": 30,
+      "severity": "warning",
+      "extra_step_title": "Check your rent agreement and payment receipts",
+      "extra_step_detail": "Compare the notice period with your rent agreement and your state's rent law. Keep bank statements, rent receipts, and messages about payments.",
+      "glossary_keys": ["tenancy", "legal_notice", "registered_post"]
+    },
+    "loan_recovery": {
+      "label": "Loan Recovery Notice",
+      "statute": "RBI recovery norms, SARFAESI Act, 2002, and civil law",
+      "topic": "an unpaid loan or EMI",
+      "allegation": "a loan amount or EMI is overdue and the lender is demanding payment",
+      "consequence": "the lender may start recovery action, arbitration, or a civil suit, and a secured loan may face action under SARFAESI",
+      "deadline_label": "Respond to the lender's demand",
+      "default_days": 15,
+      "severity": "critical",
+      "extra_step_title": "Ask for a full statement of account",
+      "extra_step_detail": "Request a written statement showing the principal, interest, penalties, and payments already made. Check whether the recovery agent is authorised by the lender.",
+      "glossary_keys": ["sarfaesi", "arbitration", "registered_post"]
+    },
+    "consumer": {
+      "label": "Consumer Complaint Notice",
+      "statute": "Consumer Protection Act, 2019",
+      "topic": "a defective product or a deficient service",
+      "allegation": "a product or service you paid for was defective or deficient, and the seller or provider has not resolved it",
+      "consequence": "the consumer may file a complaint before the District Consumer Commission under the Consumer Protection Act, 2019",
+      "deadline_label": "Reply to the consumer's demand",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "Collect your invoice, warranty, and complaint records",
+      "extra_step_detail": "Keep the bill, warranty card, product photos or videos, service tickets, and every email or chat where you raised the complaint.",
+      "glossary_keys": ["consumer_protection", "e_daakhil", "legal_notice"]
+    },
+    "maintenance": {
+      "label": "Maintenance / Family Notice",
+      "statute": "Section 144, BNSS, 2023 and applicable family law",
+      "topic": "maintenance or financial support for a family member",
+      "allegation": "you have not paid maintenance or support that the sender says is legally due",
+      "consequence": "the sender may file a maintenance case under Section 144 of the BNSS, 2023 or the applicable family law",
+      "deadline_label": "Reply to the maintenance demand",
+      "default_days": 15,
+      "severity": "critical",
+      "extra_step_title": "Gather income, expense, and family records",
+      "extra_step_detail": "Keep salary slips, bank statements, rent and school fee receipts, and any earlier court order. Do not stop responding just because the relationship has broken down.",
+      "glossary_keys": ["maintenance", "legal_notice", "statutory_notice"]
+    },
+    "property": {
+      "label": "Property / Possession Notice",
+      "statute": "Transfer of Property Act, 1882 and Specific Relief Act, 1963",
+      "topic": "ownership, possession, or a boundary dispute over property",
+      "allegation": "you are occupying, encroaching on, or interfering with property that the sender claims",
+      "consequence": "the sender may file a civil suit for possession, injunction, or declaration",
+      "deadline_label": "Reply to the property claim",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "Verify the title chain and survey records",
+      "extra_step_detail": "Collect the sale deed, mutation entries, property tax receipts, survey map, and photographs. Do not sign any document or give possession without written advice.",
+      "glossary_keys": ["title_deed", "injunction", "legal_notice"]
+    },
+    "employment": {
+      "label": "Employment / Salary Notice",
+      "statute": "Industrial Disputes Act, 1947 and state labour law",
+      "topic": "unpaid salary, termination, or another employment dispute",
+      "allegation": "your employer or employee has not met a salary, notice-period, or termination obligation",
+      "consequence": "the other side may approach the labour commissioner or an industrial tribunal",
+      "deadline_label": "Reply to the employment demand",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "Build a dated record of your employment",
+      "extra_step_detail": "Keep the appointment letter, salary slips, attendance records, emails, and the termination or resignation letter. Note every unpaid amount and date.",
+      "glossary_keys": ["legal_notice", "registered_post", "affidavit"]
+    },
+    "tax": {
+      "label": "Tax Department Notice",
+      "statute": "Income-tax Act, 1961 and GST law",
+      "topic": "an income tax or GST notice",
+      "allegation": "the tax department has raised a discrepancy, demand, or query about your return",
+      "consequence": "the department may complete the assessment, impose interest or penalty, or reopen the case",
+      "deadline_label": "Respond on the tax portal",
+      "default_days": 30,
+      "severity": "critical",
+      "extra_step_title": "Log in to the official tax portal",
+      "extra_step_detail": "Open the e-filing portal and read the notice and its annexures. Check the assessment year, section, and response deadline. Never pay a demand without verifying it on the official portal.",
+      "glossary_keys": ["assessment", "limitation_period", "legal_notice"]
+    },
+    "generic": {
+      "label": "Legal Notice",
+      "statute": "General civil and criminal law",
+      "topic": "a legal claim or demand",
+      "allegation": "the sender says you owe money, must act, or must stop doing something",
+      "consequence": "the sender may file a case or start other legal action",
+      "deadline_label": "Send a written reply",
+      "default_days": 15,
+      "severity": "warning",
+      "extra_step_title": "Identify the sender and the exact demand",
+      "extra_step_detail": "Read the notice twice. Write down who sent it, what they want, the date, the amount, and the documents they mention. Do not reply only by phone.",
+      "glossary_keys": ["legal_notice", "statutory_notice", "registered_post"]
+    }
+  }
+}
