@@ -25,6 +25,7 @@ from server.services.content import (
 )
 from server.services.document_parser import parse_pdf_bytes
 from server.services.localization import NOTICE_IDS, get_locale_store
+from server.services.sarvam_service import SarvamService
 from server.services.simplifier import analyze_notice, extract_amount
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -184,6 +185,24 @@ class GuideAndLegalAidTests(unittest.TestCase):
         approximate = find_legal_aid("Maharashtra", "A Made Up District")
         self.assertFalse(approximate.matched)
         self.assertIn("15100", approximate.note)
+
+
+class SarvamRequestTests(unittest.TestCase):
+    def test_bcp47_codes_keep_canonical_casing(self) -> None:
+        self.assertEqual(SarvamService._sarvam_code("en-IN"), "en-IN")
+        self.assertEqual(SarvamService._sarvam_code("hi_in"), "hi-IN")
+        self.assertEqual(SarvamService._sarvam_code("auto"), "auto")
+        self.assertEqual(SarvamService._sarvam_code("en"), "en-IN")
+        self.assertEqual(SarvamService._sarvam_code("not-a-language"), "en-IN")
+
+    def test_tts_payload_uses_current_field_names(self) -> None:
+        payload = SarvamService._tts_payload(
+            "hello", "en-IN", "shubh", 1.0, "bulbul:v3"
+        )
+        self.assertEqual(payload["language_code"], "en-IN")
+        self.assertNotIn("target_language_code", payload)
+        self.assertNotIn("inputs", payload)
+        self.assertNotIn("enable_preprocessing", payload)
 
 
 class ContentFileTests(unittest.TestCase):

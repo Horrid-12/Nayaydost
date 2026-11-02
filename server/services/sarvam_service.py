@@ -765,8 +765,11 @@ class SarvamService:
             return "auto"
         if normalized in SARVAM_LANGUAGE_CODES:
             return SARVAM_LANGUAGE_CODES[normalized]
-        if normalized.endswith("-in") and normalized.split("-")[0] in SARVAM_LANGUAGE_CODES:
-            return normalized
+        if normalized.endswith("-in"):
+            base = normalized.split("-", 1)[0]
+            if base in SARVAM_LANGUAGE_CODES:
+                # Sarvam expects BCP-47 casing (en-IN), not en-in.
+                return SARVAM_LANGUAGE_CODES[base]
         return default
 
     @staticmethod

@@ -108,9 +108,9 @@ The UI always shows the current mode and labels fallback output. Mock audio is n
 | `SARVAM_API_KEY` | empty | Enables live Sarvam calls. Never commit a real key. |
 | `SARVAM_BASE_URL` | `https://api.sarvam.ai` | Sarvam API base URL. |
 | `SARVAM_TRANSLATE_MODEL` | `mayura:v1` | Translation model. |
-| `SARVAM_TTS_MODEL` | `bulbul:v2` | Text-to-speech model. |
+| `SARVAM_TTS_MODEL` | `bulbul:v3` | Text-to-speech model (Bulbul v2 is deprecated). |
 | `SARVAM_STT_MODEL` | `saaras:v4` | Speech-to-text model. |
-| `SARVAM_TTS_SPEAKER` | `anushka` | Default Bulbul speaker. |
+| `SARVAM_TTS_SPEAKER` | `shubh` | Default Bulbul speaker. |
 | `SARVAM_TRANSLATE_TIMEOUT` | `15` | Translation timeout in seconds. |
 | `SARVAM_TTS_TIMEOUT` | `25` | TTS timeout in seconds. |
 | `SARVAM_STT_TIMEOUT` | `35` | STT timeout in seconds. |
