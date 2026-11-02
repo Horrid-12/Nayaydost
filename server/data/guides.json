@@ -1,0 +1,591 @@
+{
+  "cheque_bounce": {
+    "title": "Cheque bounce: what to do next",
+    "overview": "A cheque you issued was returned unpaid. The sender is using Section 138 of the Negotiable Instruments Act, 1881, which gives you a short window to pay or reply before a criminal complaint can be filed. The exact dates matter more than the tone of the notice.",
+    "steps": [
+      {
+        "title": "Get the cheque return memo from your bank",
+        "detail": "Ask your bank for the return memo. It states the exact reason (insufficient funds, stop payment, signature mismatch, account closed) and the date the cheque was returned. This date starts the legal clock."
+      },
+      {
+        "title": "Check the 30-day presentation rule",
+        "detail": "The cheque must normally have been presented within three months of its date. If it was presented late, the Section 138 claim may be weak. Note the cheque date, presentation date, and return date."
+      },
+      {
+        "title": "Reply in writing within 15 days",
+        "detail": "Send a written reply by registered post or speed post. You may dispute the debt, ask for documents, or state that you are arranging payment. Keep the postal receipt and tracking proof."
+      },
+      {
+        "title": "Do not pay under pressure without a written record",
+        "detail": "If you pay, pay by bank transfer or cheque and get a written acknowledgement that the amount relates to this cheque. Do not hand over cash without a receipt."
+      },
+      {
+        "title": "Get a lawyer before the complaint is filed",
+        "detail": "If the amount is large or you dispute the debt, consult an advocate quickly. Free help is available through the District Legal Services Authority and the NALSA helpline 15100."
+      }
+    ],
+    "documents": [
+      "Copy of the cheque and the cheque return memo",
+      "Bank statement showing the account and the dishonour",
+      "Copy of the loan or business agreement with the sender",
+      "Proof of any payment already made",
+      "The notice and the postal envelope or tracking record"
+    ],
+    "timeline": [
+      {
+        "when": "Day 0",
+        "action": "The cheque is returned unpaid by the bank."
+      },
+      {
+        "when": "Within 30 days of the return",
+        "action": "The sender may issue a demand notice."
+      },
+      {
+        "when": "Within 15 days of receiving the notice",
+        "action": "You may pay or send a written reply."
+      },
+      {
+        "when": "After that 15-day window",
+        "action": "The complainant may file a criminal complaint within about one month."
+      }
+    ],
+    "mistakes": [
+      "Ignoring the notice because you believe the sender is a friend or relative.",
+      "Replying only on WhatsApp or by phone instead of in writing.",
+      "Paying cash without a written acknowledgement.",
+      "Assuming the cheque amount is correct without checking the loan statement."
+    ],
+    "lawyer_flags": [
+      "The cheque was presented more than three months after its date.",
+      "The notice was sent to the wrong address or received very late.",
+      "You never issued the cheque or it was taken under pressure.",
+      "The amount claimed includes unexplained interest or charges."
+    ],
+    "reply_points": [
+      "Deny or admit the debt clearly, without admitting criminal liability.",
+      "Ask for a copy of the cheque, return memo, and statement of account.",
+      "State the date you received the notice.",
+      "Reserve your right to respond after reviewing the documents."
+    ]
+  },
+  "rent_eviction": {
+    "title": "Rent and eviction: protect your tenancy",
+    "overview": "A landlord is demanding arrears, possession, or both. Your rights depend on the rent agreement and the rent control law of your state. A notice is not an eviction order; only a court can order possession in most cases.",
+    "steps": [
+      {
+        "title": "Read the notice period in your lease",
+        "detail": "Compare the notice with the termination clause in your rent agreement and your state rent control law. A landlord usually cannot bypass the agreed notice period."
+      },
+      {
+        "title": "Build a payment ledger",
+        "detail": "List every month's rent, the amount paid, the date, and the mode of payment. Attach bank statements, UPI records, rent receipts, and WhatsApp messages."
+      },
+      {
+        "title": "Reply in writing and keep paying rent",
+        "detail": "Send a written reply disputing any wrong arrears. If rent is genuinely due, pay it or deposit it in a way you can prove. Do not stop paying rent just because the notice is disputed."
+      },
+      {
+        "title": "Do not vacate or sign papers under pressure",
+        "detail": "Do not sign a blank surrender letter or hand over keys without written advice. If you agree to vacate, record the date, the deposit adjustment, and the condition of the premises in writing."
+      },
+      {
+        "title": "Ask for free legal aid if eviction is filed",
+        "detail": "Contact your District Legal Services Authority or the NALSA helpline 15100. Carry the lease, payment proof, and the notice."
+      }
+    ],
+    "documents": [
+      "Rent or lease agreement, including renewals",
+      "Rent receipts, bank statements, and UPI records",
+      "Property tax and maintenance receipts",
+      "Written messages about repairs, rent, or notice",
+      "Photographs of the premises and any damage"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Check the notice period and the arrears calculation."
+      },
+      {
+        "when": "Within the notice period",
+        "action": "Send a written reply and pay or tender the undisputed rent."
+      },
+      {
+        "when": "If the notice expires",
+        "action": "The landlord may file an eviction suit; do not ignore court papers."
+      }
+    ],
+    "mistakes": [
+      "Stopping rent payments to protest the notice.",
+      "Vacating without a written settlement of the security deposit.",
+      "Signing a surrender letter without reading it.",
+      "Ignoring a court summons because the landlord's notice was wrong."
+    ],
+    "lawyer_flags": [
+      "The landlord is changing the locks or cutting water and electricity.",
+      "The notice period is shorter than the lease or state law requires.",
+      "The arrears include amounts you have already paid.",
+      "The landlord refuses to give a receipt for rent."
+    ],
+    "reply_points": [
+      "State the correct rent, the payments made, and the balance if any.",
+      "Dispute any unlawful charge or short notice period.",
+      "Ask for the rent ledger and a copy of the lease relied on.",
+      "Say clearly whether you are willing to vacate and on what terms."
+    ]
+  },
+  "loan_recovery": {
+    "title": "Loan recovery: know your protections",
+    "overview": "A lender or recovery agency is demanding an overdue loan or EMI. Lenders must follow RBI recovery norms, and secured loans may involve SARFAESI. You have the right to a clear statement of account and to be treated with dignity.",
+    "steps": [
+      {
+        "title": "Ask for a complete statement of account",
+        "detail": "Request a written statement showing the principal, interest rate, penalties, insurance, and every payment credited. Check whether the outstanding figure matches your own records."
+      },
+      {
+        "title": "Verify the recovery agent's authority",
+        "detail": "Recovery agents must carry written authorisation from the lender. You can ask for the agent's identity and authorisation. Harassment, threats, and calls at odd hours are not acceptable."
+      },
+      {
+        "title": "Reply in writing within the deadline",
+        "detail": "Send a written reply disputing wrong charges or asking for a repayment plan. Keep copies and postal proof. Do not sign blank papers or transfer money to a personal account."
+      },
+      {
+        "title": "Check whether SARFAESI applies",
+        "detail": "SARFAESI usually applies to secured loans above the threshold in the Act. A valid notice has strict content and timing rules. Consult a lawyer before ignoring a possession notice."
+      },
+      {
+        "title": "Use the lender's grievance and RBI channels",
+        "detail": "If the lender does not resolve the issue, use its grievance redressal officer and then the RBI Ombudsman. For free legal help, call 15100."
+      }
+    ],
+    "documents": [
+      "Loan agreement, sanction letter, and repayment schedule",
+      "Bank statement showing EMIs and deductions",
+      "All notices and emails from the lender or agent",
+      "Record of calls or messages that feel threatening",
+      "Insurance and processing-fee receipts"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Request the statement of account and verify the outstanding amount."
+      },
+      {
+        "when": "Within the notice period",
+        "action": "Send a written reply or a repayment proposal."
+      },
+      {
+        "when": "If SARFAESI is invoked",
+        "action": "Get legal advice immediately; strict deadlines apply."
+      }
+    ],
+    "mistakes": [
+      "Paying a recovery agent's personal account without lender confirmation.",
+      "Ignoring a SARFAESI possession notice.",
+      "Signing a fresh loan or settlement without reading the terms.",
+      "Borrowing from another lender to pay without checking the total cost."
+    ],
+    "lawyer_flags": [
+      "The lender refuses to give a statement of account.",
+      "The agent threatens arrest, public shaming, or violence.",
+      "The notice claims a much higher amount than your records.",
+      "A possession notice is pasted on your home."
+    ],
+    "reply_points": [
+      "Dispute any charge that is not in the loan agreement.",
+      "Ask for the complete statement and the legal basis for the demand.",
+      "State what repayment plan you can realistically afford.",
+      "Demand that all communication be in writing."
+    ]
+  },
+  "consumer": {
+    "title": "Consumer complaint: get a refund or replacement",
+    "overview": "A seller or service provider has not resolved a defective product or deficient service. The Consumer Protection Act, 2019 gives you a route to a refund, replacement, compensation, and costs, including an online complaint through e-Daakhil.",
+    "steps": [
+      {
+        "title": "Preserve the purchase and complaint record",
+        "detail": "Keep the invoice, warranty card, product photos or videos, service tickets, and every email or chat where you raised the complaint. Note the dates of each visit or call."
+      },
+      {
+        "title": "Send a clear written demand",
+        "detail": "State the defect, what you want (refund, replacement, or repair), and a reasonable deadline. Send it by email and registered post so you have proof."
+      },
+      {
+        "title": "Check the warranty and return policy",
+        "detail": "Read the warranty terms and the seller's return policy. A warranty cannot take away your statutory consumer rights."
+      },
+      {
+        "title": "Use the grievance officer and e-Daakhil",
+        "detail": "If the seller does not respond, use the company's grievance officer and then the National Consumer Helpline. You can file a complaint before the District Consumer Commission through e-Daakhil."
+      },
+      {
+        "title": "Keep your claim realistic",
+        "detail": "Claim the amount you actually paid, plus compensation you can justify. Keep bills for any repair, travel, or alternative arrangement."
+      }
+    ],
+    "documents": [
+      "Invoice, payment proof, and warranty card",
+      "Photos or videos of the defect",
+      "Service reports and technician visit slips",
+      "Emails, chats, and complaint reference numbers",
+      "Bank statement showing the payment"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Report the defect in writing and preserve evidence."
+      },
+      {
+        "when": "Within the warranty period",
+        "action": "Ask for repair, replacement, or refund in writing."
+      },
+      {
+        "when": "If unresolved",
+        "action": "File a consumer complaint online through e-Daakhil."
+      }
+    ],
+    "mistakes": [
+      "Throwing away the invoice or warranty card.",
+      "Accepting a repair that does not fix the defect without recording it.",
+      "Waiting beyond the limitation period before filing.",
+      "Claiming an inflated amount without documents."
+    ],
+    "lawyer_flags": [
+      "The product caused injury or a serious safety problem.",
+      "The seller used misleading advertisements or hidden charges.",
+      "The company refuses to provide a written response.",
+      "The claim involves a large amount or a complex service contract."
+    ],
+    "reply_points": [
+      "Describe the defect and the date it first appeared.",
+      "State exactly what remedy you want.",
+      "List the documents you are enclosing.",
+      "Give a clear deadline for the response."
+    ]
+  },
+  "maintenance": {
+    "title": "Maintenance and family support",
+    "overview": "A spouse, child, or parent is claiming maintenance. Section 144 of the BNSS, 2023 and the applicable family law allow a court to order monthly support. The amount depends on needs, income, and the standard of living.",
+    "steps": [
+      {
+        "title": "Understand the claim and the forum",
+        "detail": "Read the notice to see who is claiming, how much, and under which law. Maintenance cases are usually filed before the Family Court or the Magistrate."
+      },
+      {
+        "title": "Collect income and expense records",
+        "detail": "Keep salary slips, bank statements, tax returns, rent, school fees, medical bills, and any earlier court order. Both sides must disclose their finances honestly."
+      },
+      {
+        "title": "Reply without admitting an inflated amount",
+        "detail": "Acknowledge the relationship if it is true, but ask for the basis of the amount claimed. Offer a realistic interim arrangement if you can afford one."
+      },
+      {
+        "title": "Do not stop communicating",
+        "detail": "Ignoring the notice can lead to an ex parte order. Attend every hearing and keep copies of all documents filed."
+      },
+      {
+        "title": "Ask for mediation or legal aid",
+        "detail": "Family courts often encourage mediation. Free legal aid is available through the DLSA and the NALSA helpline 15100."
+      }
+    ],
+    "documents": [
+      "Marriage certificate and family records",
+      "Salary slips, Form 16, and income-tax returns",
+      "Bank and credit card statements",
+      "Rent, school fee, medical, and household expense proof",
+      "Any earlier maintenance order or settlement"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Read the claim and note the amount and the forum."
+      },
+      {
+        "when": "Within the notice period",
+        "action": "Send a written reply with your income and expense details."
+      },
+      {
+        "when": "If a case is filed",
+        "action": "Attend the first hearing and apply for interim orders if needed."
+      }
+    ],
+    "mistakes": [
+      "Hiding income or assets in court.",
+      "Paying cash without a receipt or bank record.",
+      "Ignoring court notices and risking an ex parte order.",
+      "Using the notice to harass the other side instead of resolving the issue."
+    ],
+    "lawyer_flags": [
+      "There is a risk of arrest or attachment if you ignore the order.",
+      "The claim includes arrears or an urgent interim application.",
+      "There is a parallel divorce or custody case.",
+      "The other side has hidden income or assets."
+    ],
+    "reply_points": [
+      "State your monthly income, dependants, and fixed expenses.",
+      "Ask for the calculation behind the amount claimed.",
+      "Offer a realistic interim amount if appropriate.",
+      "Request mediation and a written record of every payment."
+    ]
+  },
+  "property": {
+    "title": "Property and possession disputes",
+    "overview": "Someone is claiming ownership, possession, or an end to interference with property. Title and possession are decided by civil courts on documents, survey records, and evidence. A notice is a warning, not a court order.",
+    "steps": [
+      {
+        "title": "Verify the title chain",
+        "detail": "Collect the sale deed, mother deed, mutation entries, property tax receipts, and encumbrance certificate. Check that the names and survey numbers match the notice."
+      },
+      {
+        "title": "Get a recent survey and photographs",
+        "detail": "Ask the local survey office for a map and measurement. Take dated photographs and, if possible, a video of the boundary and construction."
+      },
+      {
+        "title": "Reply without admitting the claim",
+        "detail": "State your ownership or possession and the documents you rely on. Do not sign any document, give possession, or accept money without legal advice."
+      },
+      {
+        "title": "Do not resort to self-help",
+        "detail": "Do not demolish, block access, or threaten the other side. Self-help can weaken your case and lead to criminal complaints."
+      },
+      {
+        "title": "File or defend promptly",
+        "detail": "Civil suits and injunction applications have strict timelines. Consult an advocate and consider mediation where the dispute is really about a boundary."
+      }
+    ],
+    "documents": [
+      "Sale deed, gift deed, or inheritance documents",
+      "Mutation entries and property tax receipts",
+      "Survey map, measurement record, and encumbrance certificate",
+      "Dated photographs and videos of the property",
+      "All notices, letters, and court papers"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Secure the documents and take dated photographs."
+      },
+      {
+        "when": "Within the notice period",
+        "action": "Send a written reply asserting your title or possession."
+      },
+      {
+        "when": "If a suit is filed",
+        "action": "File a written statement and any counterclaim on time."
+      }
+    ],
+    "mistakes": [
+      "Giving possession or signing a settlement without advice.",
+      "Relying on oral agreements or unregistered documents.",
+      "Damaging the disputed property or blocking access.",
+      "Ignoring a court summons or an injunction order."
+    ],
+    "lawyer_flags": [
+      "The other side has already filed a suit or injunction application.",
+      "The documents show a forged signature or a missing link in the title chain.",
+      "The dispute involves agricultural land or a tribal area with special rules.",
+      "There is a risk of forcible dispossession."
+    ],
+    "reply_points": [
+      "State the basis of your title or possession.",
+      "List the documents and survey records you rely on.",
+      "Deny any encroachment or unauthorized construction.",
+      "Reserve your right to file or defend a civil suit."
+    ]
+  },
+  "employment": {
+    "title": "Employment disputes and unpaid salary",
+    "overview": "An employer or employee is claiming unpaid wages, notice pay, or challenging a termination. The appointment letter, salary records, and the Industrial Disputes Act or state labour law will shape the response.",
+    "steps": [
+      {
+        "title": "Build a dated employment record",
+        "detail": "Keep the appointment letter, salary slips, attendance records, emails, and the termination or resignation letter. Note every unpaid amount and the date it fell due."
+      },
+      {
+        "title": "Check the notice and termination clause",
+        "detail": "Read the appointment letter for notice period, probation, and termination terms. A termination that violates the contract or law may be challenged."
+      },
+      {
+        "title": "Send a written demand",
+        "detail": "Ask for the unpaid salary, notice pay, and any statutory dues. Attach your calculation and the supporting records."
+      },
+      {
+        "title": "Approach the Labour Commissioner",
+        "detail": "For many workmen and salary disputes, the Labour Commissioner can conciliate. Keep the complaint concise and attach the documents."
+      },
+      {
+        "title": "Protect your reputation and records",
+        "detail": "Do not take confidential files or post allegations online. Ask for a relieving letter, experience certificate, and full and final settlement."
+      }
+    ],
+    "documents": [
+      "Appointment letter and employment contract",
+      "Salary slips, bank statements, and Form 16",
+      "Attendance, leave, and performance records",
+      "Emails about salary, termination, or resignation",
+      "Full and final settlement or relieving letter"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Collect the contract, salary slips, and termination communication."
+      },
+      {
+        "when": "Within the notice period",
+        "action": "Send a written demand with your calculation."
+      },
+      {
+        "when": "If unpaid",
+        "action": "Approach the Labour Commissioner or an industrial tribunal."
+      }
+    ],
+    "mistakes": [
+      "Resigning without recording the reason or the dues.",
+      "Accepting a settlement without checking statutory dues.",
+      "Missing the limitation period for an industrial dispute.",
+      "Sharing confidential company data or defamatory posts."
+    ],
+    "lawyer_flags": [
+      "The termination is linked to whistleblowing or discrimination.",
+      "The employer has withheld provident fund or gratuity.",
+      "There is a criminal complaint or a counter-allegation.",
+      "The employee is a workman covered by industrial law."
+    ],
+    "reply_points": [
+      "State the employment dates, role, and last drawn salary.",
+      "List each unpaid amount with its due date.",
+      "Dispute the reason for termination if it is false.",
+      "Ask for the relieving letter and full settlement."
+    ]
+  },
+  "tax": {
+    "title": "Tax notices: respond on the official portal",
+    "overview": "The Income-tax Department or GST authority has raised a discrepancy, demand, or query. Deadlines are strict, and a response filed on the official portal creates a clean record. Never pay a demand without verifying it.",
+    "steps": [
+      {
+        "title": "Log in to the official portal",
+        "detail": "Open the income-tax e-filing portal or the GST portal directly. Read the notice, the annexures, the assessment year, and the exact response deadline."
+      },
+      {
+        "title": "Match the notice to your returns",
+        "detail": "Compare the figures with your ITR, Form 26AS, AIS, GSTR-3B, and GSTR-2B. Identify whether the difference is a reporting error, a timing difference, or a demand you dispute."
+      },
+      {
+        "title": "Reply with a reconciliation",
+        "detail": "Prepare a clear reconciliation statement and attach the invoices, returns, and payment proof. File the response on the portal before the deadline."
+      },
+      {
+        "title": "Do not pay an unverified demand",
+        "detail": "Check the demand on the portal and ask for the calculation. A revised return or rectification may remove a demand that is based on a mismatch."
+      },
+      {
+        "title": "Get professional help for large demands",
+        "detail": "For a large demand, penalty, or reassessment, consult a chartered accountant or tax lawyer. Keep the acknowledgement of every portal submission."
+      }
+    ],
+    "documents": [
+      "The notice and all annexures",
+      "Income-tax returns, Form 26AS, and AIS",
+      "GST returns, invoices, and reconciliation",
+      "Bank statements and payment challans",
+      "Portal acknowledgement of the response"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Download the notice and confirm the deadline on the portal."
+      },
+      {
+        "when": "Before the deadline",
+        "action": "File the explanation and reconciliation on the portal."
+      },
+      {
+        "when": "If a demand remains",
+        "action": "Check for rectification, appeal, or payment options."
+      }
+    ],
+    "mistakes": [
+      "Paying a demand without reading the notice.",
+      "Responding only by email instead of the official portal.",
+      "Missing the response deadline and losing the chance to explain.",
+      "Ignoring a notice addressed to an old address or a former business."
+    ],
+    "lawyer_flags": [
+      "The notice alleges suppression of income or a large penalty.",
+      "There is a reassessment or a search-related notice.",
+      "The demand is beyond your ability to pay.",
+      "The notice is addressed to a deceased person or a closed business."
+    ],
+    "reply_points": [
+      "State the assessment year, section, and reference number.",
+      "Explain each discrepancy with a reconciliation.",
+      "Attach the returns, invoices, and payment proof.",
+      "Ask for a personal hearing if the issue is complex."
+    ]
+  },
+  "generic": {
+    "title": "A legal notice: first steps",
+    "overview": "A legal notice is a formal written demand sent before a case is filed. It is not a court order, but ignoring it can lead to a suit or complaint. Read it twice, identify the sender and the exact demand, and respond in writing.",
+    "steps": [
+      {
+        "title": "Identify the sender and the demand",
+        "detail": "Write down who sent the notice, what they want, the date, the amount, and the documents they mention. Check whether the sender is the actual claimant or a lawyer acting for them."
+      },
+      {
+        "title": "Note every date and deadline",
+        "detail": "Mark the date of the notice, the date you received it, and the reply deadline. Keep the envelope and the postal tracking record."
+      },
+      {
+        "title": "Reply in writing",
+        "detail": "Send a polite, clear reply by registered post or speed post. You can deny the claim, ask for documents, or propose a settlement. Keep a copy."
+      },
+      {
+        "title": "Do not sign or pay under pressure",
+        "detail": "Do not sign blank papers, give post-dated cheques, or pay cash without a receipt. Get legal advice before admitting liability."
+      },
+      {
+        "title": "Get free legal help",
+        "detail": "Call the NALSA helpline 15100 or contact your District Legal Services Authority. Carry the notice and all related documents."
+      }
+    ],
+    "documents": [
+      "The notice and the postal envelope or tracking record",
+      "The agreement, invoice, receipt, or contract referred to",
+      "Bank statements and payment proof",
+      "Emails, chats, and photographs",
+      "Any earlier legal or court papers"
+    ],
+    "timeline": [
+      {
+        "when": "Immediately",
+        "action": "Read the notice and note the sender, demand, and deadline."
+      },
+      {
+        "when": "Within the notice period",
+        "action": "Send a written reply and preserve proof of delivery."
+      },
+      {
+        "when": "If the deadline passes",
+        "action": "The sender may file a case; do not ignore court papers."
+      }
+    ],
+    "mistakes": [
+      "Ignoring the notice and hoping it will go away.",
+      "Replying only by phone or WhatsApp.",
+      "Admitting the full claim without checking the documents.",
+      "Missing the deadline because the envelope was not opened."
+    ],
+    "lawyer_flags": [
+      "The notice threatens arrest or criminal action.",
+      "The amount or the legal basis is unclear.",
+      "The sender has already filed a case.",
+      "The dispute involves family, property, or a large sum."
+    ],
+    "reply_points": [
+      "Acknowledge the notice and state the date you received it.",
+      "Deny or clarify the claim without admitting liability.",
+      "Ask for the documents and calculations relied on.",
+      "State your position and reserve your rights."
+    ]
+  }
+}

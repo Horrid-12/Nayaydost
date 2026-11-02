@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NyayaDost explains Indian legal notices and FIRs in plain language, with deadlines, next steps, audio, and free legal aid.">
+  <meta name="theme-color" content="#FBF9F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+  <title>NyayaDost — Legal notices in plain language</title>
+  <script src="/static/js/theme-init.js"></script>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the main content</a>
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="NyayaDost home">
+        <span class="brand-seal" aria-hidden="true">⚖</span>
+        <span class="brand-text">
+          <span class="brand-name">NyayaDost</span>
+          <span class="brand-native">न्यायदोस्त</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#workspace">Explain a notice</a>
+        <a href="#guide">NyayaGuide</a>
+        <a href="#legal-aid">Legal Aid</a>
+      </nav>
+
+      <div class="header-actions">
+        <span class="mode-chip" id="mode-chip" hidden></span>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+          <span class="theme-knob" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> Legal notices, in language you actually speak</p>
+        <h1 id="hero-title">Understand the notice.<br><em>Know your next step.</em></h1>
+        <p class="hero-lede">
+          NyayaDost reads a legal notice or FIR, strips away the legalese, and tells you what it means,
+          what date matters, and what to do next — in English, हिन्दी, मराठी, ગુજરાતી, தமிழ், తెలుగు, or বাংলা.
+        </p>
+        <div class="hero-meta" aria-label="Key promises">
+          <span><strong>7</strong> Indian languages</span>
+          <span><strong>0</strong> documents stored</span>
+          <span><strong>15100</strong> free legal aid helpline</span>
+        </div>
+      </div>
+
+      <aside class="hero-seal-card" aria-label="How NyayaDost works">
+        <div class="seal" aria-hidden="true">
+          <span class="seal-ring"></span>
+          <span class="seal-center">
+            <span class="seal-scales">⚖</span>
+            <span class="seal-title">NYAYA DOST</span>
+            <span class="seal-sub">PLAIN LANGUAGE · INDIA</span>
+          </span>
+        </div>
+        <ol class="how-list">
+          <li><span>01</span><div><strong>Add the notice</strong><p>Paste the text, upload a PDF, or dictate it.</p></div></li>
+          <li><span>02</span><div><strong>Get the citizen breakdown</strong><p>Meaning, deadlines, steps, and terms decoded.</p></div></li>
+          <li><span>03</span><div><strong>Act before the date</strong><p>Print the checklist, share it, or find free legal help.</p></div></li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="workspace" id="workspace" aria-labelledby="workspace-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> The reading room</p>
+          <h2 id="workspace-title">Explain a notice</h2>
+        </div>
+        <p class="section-note">Your document is processed in memory on this server. It is not saved or sent to Sarvam unless you ask for translation or audio.</p>
+      </div>
+
+      <div class="workspace-grid">
+        <section class="panel input-panel" aria-labelledby="input-title">
+          <div class="panel-head">
+            <h3 id="input-title">1. Give us the notice</h3>
+            <span class="panel-note">PDF or text</span>
+          </div>
+
+          <div class="language-field">
+            <label for="language-select">Explain it in</label>
+            <select id="language-select" aria-describedby="language-help"></select>
+            <p id="language-help" class="field-hint">The explanation, deadlines, and checklist will appear in this language.</p>
+          </div>
+
+          <div class="input-tabs" role="tablist" aria-label="How to add the notice">
+            <button type="button" class="input-tab is-active" id="tab-button-text" role="tab" aria-selected="true" aria-controls="tab-text" data-input-tab="text">Paste text</button>
+            <button type="button" class="input-tab" id="tab-button-upload" role="tab" aria-selected="false" aria-controls="tab-upload" data-input-tab="upload">Upload PDF</button>
+            <button type="button" class="input-tab" id="tab-button-dictate" role="tab" aria-selected="false" aria-controls="tab-dictate" data-input-tab="dictate">Dictate</button>
+          </div>
+
+          <div class="tab-panel" id="tab-text" role="tabpanel" aria-labelledby="tab-button-text">
+            <label class="sr-only" for="notice-text">Paste the notice text</label>
+            <textarea id="notice-text" rows="12" spellcheck="true" placeholder="Paste the full notice here. Include the date, sender, amount, and the paragraph that asks you to pay or reply."></textarea>
+            <div class="textarea-meta">
+              <span id="char-count">0 characters</span>
+              <button type="button" class="text-button" id="clear-text">Clear text</button>
+            </div>
+
+            <div class="sample-block">
+              <p class="field-hint">No notice handy? Load a realistic sample to see how NyayaDost works.</p>
+              <div class="sample-list" id="sample-list" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-upload" role="tabpanel" aria-labelledby="tab-button-upload" hidden>
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose or drop a PDF notice">
+              <span class="dropzone-icon" aria-hidden="true">⇩</span>
+              <strong>Drop a PDF here</strong>
+              <span>or choose a file from your device</span>
+              <span class="dropzone-hint">Text-based PDFs only · up to <span id="upload-limit">10</span> MB</span>
+              <input type="file" id="pdf-input" accept="application/pdf,.pdf" hidden>
+            </div>
+
+            <div class="file-preview" id="file-preview" hidden>
+              <div class="file-preview-head">
+                <div>
+                  <strong id="file-name">notice.pdf</strong>
+                  <span id="file-size" class="field-hint"></span>
+                </div>
+                <button type="button" class="text-button" id="remove-file">Remove</button>
+              </div>
+              <div class="pdf-frame-wrap">
+                <iframe id="pdf-frame" title="Preview of the selected PDF"></iframe>
+              </div>
+              <div class="pdf-controls" role="group" aria-label="PDF preview controls">
+                <button type="button" class="button tiny" data-pdf-zoom="page-width">Fit width</button>
+                <button type="button" class="button tiny" data-pdf-zoom="100">100%</button>
+                <a class="button tiny" id="pdf-open" href="#" target="_blank" rel="noopener">Open in new tab</a>
+              </div>
+            </div>
+            <p class="field-hint">Scanned image PDFs have no selectable text. If we cannot read yours, paste the text in the text tab.</p>
+          </div>
+
+          <div class="tab-panel" id="tab-dictate" role="tabpanel" aria-labelledby="tab-button-dictate" hidden>
+            <div class="dictate-box">
+              <button type="button" class="record-button" id="record-button" aria-pressed="false">
+                <span class="record-dot" aria-hidden="true"></span>
+                <span id="record-label">Start recording</span>
+              </button>
+              <p class="record-timer" id="record-timer">00:00</p>
+              <p class="field-hint" id="record-hint">Speak the notice aloud. Your browser may ask for microphone permission.</p>
+              <div class="record-actions" id="record-actions" hidden>
+                <button type="button" class="button tiny" id="record-stop">Stop</button>
+                <button type="button" class="button tiny" id="record-discard">Discard</button>
+              </div>
+              <audio id="record-playback" controls hidden></audio>
+              <button type="button" class="button ghost" id="use-transcript" hidden>Use this transcript</button>
+            </div>
+            <p class="field-hint">No microphone? Upload an audio file instead.</p>
+            <label class="file-inline">
+              <span>Audio file</span>
+              <input type="file" id="audio-input" accept="audio/*">
+            </label>
+          </div>
+
+          <div class="input-actions">
+            <button type="button" class="button primary" id="analyze-button" disabled>
+              <span class="button-stamp" aria-hidden="true">⚖</span>
+              Explain this notice
+            </button>
+            <p class="privacy-note"><span aria-hidden="true">▣</span> Processed in memory. Never stored.</p>
+          </div>
+          <div class="inline-alert" id="input-error" role="alert" hidden></div>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="result-title" aria-live="polite">
+          <div class="panel-head result-panel-head">
+            <h3 id="result-title">2. Your citizen breakdown</h3>
+            <span class="panel-note" id="result-panel-note">Waiting for a notice</span>
+          </div>
+
+          <div class="processing" id="processing" hidden aria-live="polite">
+            <div class="processing-seal" aria-hidden="true"><span>⚖</span></div>
+            <p class="processing-title">Reading the notice carefully</p>
+            <ol class="processing-stages" id="processing-stages">
+              <li data-stage="parse"><span class="stage-mark" aria-hidden="true"></span><div><strong>Parsing clauses</strong><p>Finding the sender, dates, amount, and legal sections.</p></div></li>
+              <li data-stage="distil"><span class="stage-mark" aria-hidden="true"></span><div><strong>Distilling legalese</strong><p>Turning formal phrases into a plain-language explanation.</p></div></li>
+              <li data-stage="translate"><span class="stage-mark" aria-hidden="true"></span><div><strong>Translating into vernacular</strong><p>Writing the summary, deadlines, and checklist in your language.</p></div></li>
+            </ol>
+          </div>
+
+          <div class="empty-state" id="empty-state">
+            <div class="empty-seal" aria-hidden="true">⚖</div>
+            <p class="empty-kicker">Nothing to explain yet</p>
+            <h4>The notice goes in. A clear plan comes out.</h4>
+            <p>You will see a plain-language summary, a countdown to every deadline, a printable checklist, a glossary, and a reply draft.</p>
+            <ul class="empty-list">
+              <li><span aria-hidden="true">📌</span> What the notice actually means</li>
+              <li><span aria-hidden="true">⏳</span> The date that matters, in plain numbers</li>
+              <li><span aria-hidden="true">✅</span> The next step, in order</li>
+            </ul>
+          </div>
+
+          <div id="result-root" hidden>
+            <header class="result-header">
+              <div class="result-header-main">
+                <p class="result-kicker" id="result-kicker">Notice explained</p>
+                <h4 id="result-type">Legal Notice</h4>
+                <p class="result-statute" id="result-statute"></p>
+              </div>
+              <div class="result-header-side">
+                <div class="confidence" id="confidence-badge">
+                  <span class="confidence-ring" id="confidence-ring" aria-hidden="true"></span>
+                  <span><strong id="confidence-value">—</strong><small>match confidence</small></span>
+                </div>
+                <div class="badge-row" id="badge-row"></div>
+              </div>
+            </header>
+
+            <div class="result-warning" id="result-warning" hidden></div>
+
+            <div class="result-tabs" role="tablist" aria-label="Result sections">
+              <button type="button" class="result-tab is-active" role="tab" aria-selected="true" aria-controls="tab-breakdown" id="result-tab-button-breakdown" data-result-tab="breakdown">Citizen Breakdown</button>
+              <button type="button" class="result-tab" role="tab" aria-selected="false" aria-controls="tab-original" id="result-tab-button-original" data-result-tab="original">Original Legalese</button>
+              <button type="button" class="result-tab" role="tab" aria-selected="false" aria-controls="tab-glossary" id="result-tab-button-glossary" data-result-tab="glossary">Glossary</button>
+              <button type="button" class="result-tab" role="tab" aria-selected="false" aria-controls="tab-reply" id="result-tab-button-reply" data-result-tab="reply">Reply Draft</button>
+            </div>
+
+            <div class="result-tab-panel" id="tab-breakdown" role="tabpanel" aria-labelledby="result-tab-button-breakdown">
+              <article class="card summary-card">
+                <div class="card-kicker"><span aria-hidden="true">📌</span> <span id="summary-label">What This Notice Means</span></div>
+                <h5 id="summary-title">Summary</h5>
+                <p class="summary-body" id="summary-body"></p>
+                <div class="summary-actions">
+                  <button type="button" class="button ghost small" id="speak-summary"><span aria-hidden="true">◉</span> Read aloud</button>
+                  <button type="button" class="button ghost small" id="copy-summary"><span aria-hidden="true">⧉</span> Copy</button>
+                </div>
+              </article>
+
+              <div class="facts-strip" id="facts-strip" aria-label="Key facts"></div>
+
+              <section class="deadline-section" aria-labelledby="deadline-title">
+                <div class="card-heading">
+                  <div>
+                    <p class="card-kicker"><span aria-hidden="true">⏳</span> <span id="deadline-label">Critical Deadlines</span></p>
+                    <h5 id="deadline-title">The dates that matter</h5>
+                  </div>
+                  <p class="card-note">Counted from today in India Standard Time.</p>
+                </div>
+                <div class="deadline-grid" id="deadline-grid"></div>
+              </section>
+
+              <section class="card steps-card" aria-labelledby="steps-title">
+                <div class="card-heading">
+                  <div>
+                    <p class="card-kicker"><span aria-hidden="true">✅</span> <span id="steps-label">Immediate Next Steps</span></p>
+                    <h5 id="steps-title">Your checklist</h5>
+                  </div>
+                  <div class="steps-actions">
+                    <button type="button" class="button tiny" id="print-button"><span aria-hidden="true">⎙</span> Print</button>
+                    <button type="button" class="button tiny" id="share-button"><span aria-hidden="true">↗</span> Share</button>
+                  </div>
+                </div>
+                <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="steps-progress-bar"></span></div>
+                <p class="progress-label" id="steps-progress-label">0 of 0 steps completed</p>
+                <ul class="steps-list" id="steps-list"></ul>
+              </section>
+
+              <section class="card audio-card" id="audio-card" aria-labelledby="audio-title">
+                <div class="card-heading">
+                  <div>
+                    <p class="card-kicker"><span aria-hidden="true">◉</span> <span id="audio-label">Listen to this explanation</span></p>
+                    <h5 id="audio-title">Audio in your language</h5>
+                  </div>
+                  <button type="button" class="button ghost small" id="audio-load">Load audio</button>
+                </div>
+                <div class="audio-player" id="audio-player" hidden>
+                  <button type="button" class="play-button" id="audio-play" aria-label="Play audio">▶</button>
+                  <div class="wave-wrap">
+                    <canvas id="waveform" width="720" height="64" aria-hidden="true"></canvas>
+                    <div class="wave-progress" id="wave-progress"></div>
+                  </div>
+                  <span class="audio-time" id="audio-time">0:00 / 0:00</span>
+                </div>
+                <div class="audio-controls" id="audio-controls" hidden>
+                  <div class="speed-group" role="group" aria-label="Playback speed">
+                    <button type="button" class="speed-button" data-speed="0.75">0.75×</button>
+                    <button type="button" class="speed-button is-active" data-speed="1">1×</button>
+                    <button type="button" class="speed-button" data-speed="1.25">1.25×</button>
+                  </div>
+                  <button type="button" class="button ghost small" id="device-voice">Use device voice</button>
+                </div>
+                <p class="field-hint" id="audio-note">Load a spoken explanation from Sarvam Bulbul, or use your device voice.</p>
+              </section>
+            </div>
+
+            <div class="result-tab-panel" id="tab-original" role="tabpanel" aria-labelledby="result-tab-button-original" hidden>
+              <div class="original-grid">
+                <section class="card">
+                  <div class="card-kicker"><span aria-hidden="true">▤</span> <span id="original-label">Original Legalese</span></div>
+                  <pre class="original-text" id="original-text"></pre>
+                </section>
+                <section class="card translation-card">
+                  <div class="card-kicker"><span aria-hidden="true">⇄</span> Vernacular translation</div>
+                  <p class="field-hint">Translate the original wording with Sarvam Mayura. In offline mode, key legal terms are replaced from a phrasebook and clearly labelled.</p>
+                  <button type="button" class="button ghost small" id="translate-button">Translate the original</button>
+                  <div class="inline-alert" id="translation-warning" role="status" hidden></div>
+                  <pre class="translated-text" id="translated-text" hidden></pre>
+                </section>
+              </div>
+            </div>
+
+            <div class="result-tab-panel" id="tab-glossary" role="tabpanel" aria-labelledby="result-tab-button-glossary" hidden>
+              <section class="card">
+                <div class="card-kicker"><span aria-hidden="true">✎</span> <span id="glossary-label">Legal Terms, Decoded</span></div>
+                <h5>Every term that could slow you down</h5>
+                <dl class="glossary-list" id="glossary-list"></dl>
+              </section>
+            </div>
+
+            <div class="result-tab-panel" id="tab-reply" role="tabpanel" aria-labelledby="result-tab-button-reply" hidden>
+              <section class="card reply-card">
+                <div class="card-kicker"><span aria-hidden="true">✉</span> <span id="reply-label">Reply Draft</span></div>
+                <h5 id="reply-subject">Reply to the notice</h5>
+                <p class="reply-note" id="reply-note"></p>
+                <pre class="reply-template" id="reply-template"></pre>
+                <div class="reply-actions">
+                  <button type="button" class="button tiny" id="copy-reply">Copy draft</button>
+                  <button type="button" class="button tiny" id="print-reply">Print draft</button>
+                </div>
+              </section>
+            </div>
+
+            <p class="result-disclaimer" id="result-disclaimer"></p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="guide-section" id="guide" aria-labelledby="guide-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> NyayaGuide</p>
+          <h2 id="guide-title">The law, before you need a lawyer</h2>
+        </div>
+        <p class="section-note">Short, practical guides for each notice type. Not legal advice; a map of the road ahead.</p>
+      </div>
+
+      <div class="guide-controls">
+        <div class="field">
+          <label for="guide-type">Notice type</label>
+          <select id="guide-type"></select>
+        </div>
+        <div class="field">
+          <label for="guide-language">Language</label>
+          <select id="guide-language"></select>
+        </div>
+        <button type="button" class="button primary" id="guide-load">Open the guide</button>
+      </div>
+
+      <div class="guide-content" id="guide-content" aria-live="polite">
+        <div class="loading-block" id="guide-loading" hidden><span class="mini-spinner" aria-hidden="true"></span> Opening the guide…</div>
+        <div class="guide-empty" id="guide-empty">
+          <p>Choose a notice type to see the overview, documents to collect, timeline, common mistakes, and when to call a lawyer.</p>
+        </div>
+        <div id="guide-root" hidden>
+          <div class="guide-header">
+            <div>
+              <p class="card-kicker" id="guide-type-label">NyayaGuide</p>
+              <h3 id="guide-title-text">Guide</h3>
+              <p class="guide-overview" id="guide-overview"></p>
+            </div>
+            <aside class="guide-native">
+              <p class="card-kicker">In your language</p>
+              <p id="guide-native-summary"></p>
+            </aside>
+          </div>
+          <div class="guide-grid">
+            <section class="card guide-steps-card">
+              <h4>What to do, in order</h4>
+              <ol class="guide-steps" id="guide-steps"></ol>
+            </section>
+            <aside class="guide-side">
+              <section class="card">
+                <h4>Documents to collect</h4>
+                <ul class="plain-list" id="guide-documents"></ul>
+              </section>
+              <section class="card">
+                <h4>When to call a lawyer</h4>
+                <ul class="plain-list flag-list" id="guide-flags"></ul>
+              </section>
+            </aside>
+            <section class="card">
+              <h4>Timeline</h4>
+              <ol class="timeline" id="guide-timeline"></ol>
+            </section>
+            <section class="card">
+              <h4>Common mistakes</h4>
+              <ul class="plain-list mistake-list" id="guide-mistakes"></ul>
+            </section>
+            <section class="card">
+              <h4>Points for your reply</h4>
+              <ul class="plain-list" id="guide-reply-points"></ul>
+            </section>
+            <aside class="card guide-disclaimer-card">
+              <p class="card-kicker">Before you act</p>
+              <p id="guide-disclaimer"></p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aid-section" id="legal-aid" aria-labelledby="aid-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> Legal Aid Finder</p>
+          <h2 id="aid-title">Free legal help, closer than you think</h2>
+        </div>
+        <p class="section-note">Every district has a District Legal Services Authority (DLSA). Free aid is available for women, children, workers, persons with disabilities, and many low-income households.</p>
+      </div>
+
+      <div class="aid-grid">
+        <form class="panel aid-form" id="aid-form">
+          <div class="panel-head">
+            <h3>Find your DLSA</h3>
+            <span class="panel-note">National helpline 15100</span>
+          </div>
+          <div class="field">
+            <label for="aid-state">State or Union Territory</label>
+            <select id="aid-state" required>
+              <option value="">Choose a state</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="aid-district">District</label>
+            <select id="aid-district" required>
+              <option value="">Choose a state first</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="aid-district-other">District not listed? Type it here</label>
+            <input type="text" id="aid-district-other" maxlength="80" placeholder="For example, Pune">
+          </div>
+          <button type="submit" class="button primary" id="aid-submit">Find free legal help</button>
+          <p class="field-hint">This is an indicative demo directory. Call 15100 to confirm the current address, phone number, and office hours.</p>
+          <div class="inline-alert" id="aid-error" role="alert" hidden></div>
+        </form>
+
+        <section class="panel aid-result-panel" aria-live="polite" aria-labelledby="aid-result-title">
+          <div class="aid-empty" id="aid-empty">
+            <div class="empty-seal small" aria-hidden="true">§</div>
+            <h3 id="aid-result-title">A free advocate is a phone call away</h3>
+            <p>Choose your state and district. We will show the DLSA name, what to carry, who qualifies for free aid, and how to apply.</p>
+            <p class="aid-helpline">NALSA helpline <strong>15100</strong></p>
+          </div>
+          <div id="aid-root" hidden>
+            <div class="aid-result-head">
+              <div>
+                <p class="card-kicker" id="aid-match-label">District Legal Services Authority</p>
+                <h3 id="aid-dlsa-name">DLSA</h3>
+                <p class="field-hint" id="aid-address"></p>
+              </div>
+              <span class="aid-badge" id="aid-badge">Matched</span>
+            </div>
+            <dl class="aid-facts">
+              <div><dt>Helpline</dt><dd id="aid-phone"></dd></div>
+              <div><dt>Hours</dt><dd id="aid-hours"></dd></div>
+              <div><dt>Website</dt><dd><a id="aid-website" href="https://nalsa.gov.in" target="_blank" rel="noopener">nalsa.gov.in</a></dd></div>
+            </dl>
+            <p class="aid-note" id="aid-note"></p>
+            <div class="aid-lists">
+              <section><h4>Who can get free aid</h4><ul class="plain-list" id="aid-eligibility"></ul></section>
+              <section><h4>What to carry</h4><ul class="plain-list" id="aid-documents"></ul></section>
+              <section class="wide"><h4>How to apply</h4><ol class="guide-steps compact" id="aid-steps"></ol></section>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Privacy and safety commitments">
+      <div><span aria-hidden="true">▣</span><strong>In memory only</strong><p>Uploads are parsed and discarded. Nothing is written to disk.</p></div>
+      <div><span aria-hidden="true">⌂</span><strong>Works offline</strong><p>Without a Sarvam key, the demo uses labelled local fallbacks.</p></div>
+      <div><span aria-hidden="true">⚖</span><strong>Not a law firm</strong><p>Plain-language help, not legal advice. Verify with an advocate or DLSA.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-seal small" aria-hidden="true">⚖</span>
+        <div>
+          <strong>NyayaDost</strong>
+          <p>न्याय सबके लिए, भाषा में समझने योग्य।</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#workspace">Explain a notice</a>
+        <a href="#guide">NyayaGuide</a>
+        <a href="#legal-aid">Legal Aid Finder</a>
+        <a href="/api/docs">API</a>
+      </div>
+      <div class="footer-meta">
+        <p id="footer-mode">Offline demo</p>
+        <p>Built for the Sarvam AI hackathon · <span id="footer-version">v1.0.0</span></p>
+        <p class="footer-disclaimer">NyayaDost explains documents in plain language. It is not a law firm and does not give legal advice. Verify important steps with a licensed advocate or your District Legal Services Authority.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
