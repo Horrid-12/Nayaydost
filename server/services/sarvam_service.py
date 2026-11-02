@@ -387,11 +387,18 @@ class SarvamService:
         cleaned = text.strip()
         if not cleaned:
             cleaned = self.locales.labels(target).get("audio", "Listen to this explanation")
-        truncated = len(cleaned) > self.settings.max_tts_chars
-        if truncated:
-            cleaned = self._cut_at_sentence(cleaned, self.settings.max_tts_chars)
 
-        chosen_speaker = (speaker or self.settings.sarvam_tts_speaker).strip()[:40]
+        model = self.settings.sarvam_tts_model
+        tts_limit = min(
+            self.settings.max_tts_chars, self._model_limit(model, TTS_MODEL_LIMITS)
+        )
+        truncated = len(cleaned) > tts_limit
+        if truncated:
+            cleaned = self._cut_at_sentence(cleaned, tts_limit)
+
+        chosen_speaker = self._resolve_tts_speaker(
+            model, speaker or self.settings.sarvam_tts_speaker
+        )
         safe_pace = max(0.5, min(2.0, float(pace)))
 
         if not self.settings.sarvam_configured:
@@ -404,14 +411,13 @@ class SarvamService:
             )
 
         try:
-            payload = {
-                "inputs": [cleaned],
-                "target_language_code": SARVAM_LANGUAGE_CODES[target],
-                "speaker": chosen_speaker,
-                "pace": safe_pace,
-                "model": self.settings.sarvam_tts_model,
-                "enable_preprocessing": True,
-            }
+            payload = self._tts_payload(
+                cleaned,
+                SARVAM_LANGUAGE_CODES[target],
+                chosen_speaker,
+                safe_pace,
+                model,
+            )
             data = self._post_json(
                 "/text-to-speech", payload, timeout=self.settings.sarvam_tts_timeout
             )
@@ -695,6 +701,62 @@ class SarvamService:
     # ------------------------------------------------------------------
     # Small utilities
     # ------------------------------------------------------------------
+
+    @staticmethod
+    def _model_limit(model: str, limits: dict[str, int]) -> int:
+        """Return the character limit for a model, defaulting to the largest."""
+        key = (model or "").strip().lower()
+        return limits.get(key, max(limits.values()))
+
+    @classmethod
+    def _resolve_tts_speaker(cls, model: str, requested: str) -> str:
+        """Pick a speaker that is valid for the selected Bulbul model.
+
+        Bulbul's voice catalog is model-specific: v2 uses seven legacy names,
+        v3 uses thirty-odd short names, and v4-flash uses persona IDs such as
+        ``ishita_hi_ads``. A mismatch is rejected with HTTP 422, so a configured
+        default is remapped to a safe voice instead of failing the request.
+        """
+        candidate = (requested or "").strip().lower()[:40]
+        key = (model or "").strip().lower()
+
+        if key == "bulbul:v2":
+            return candidate if candidate in BULBUL_V2_SPEAKERS else "anushka"
+        if key == "bulbul:v3":
+            return candidate if candidate in BULBUL_V3_SPEAKERS else "shubh"
+        if key == "bulbul:v4-flash":
+            if BULBUL_V4_SPEAKER_PATTERN.fullmatch(candidate):
+                return candidate
+            return BULBUL_V4_DEFAULT_SPEAKER
+        return candidate or "anushka"
+
+    @staticmethod
+    def _tts_payload(
+        text: str,
+        language_code: str,
+        speaker: str,
+        pace: float,
+        model: str,
+    ) -> dict[str, Any]:
+        """Build the current Bulbul request body.
+
+        The REST contract uses ``text`` (string) plus ``language_code``. Older
+        integrations used ``inputs`` (list) plus ``target_language_code``; those
+        keys are intentionally not sent because the current API rejects them.
+        """
+        payload: dict[str, Any] = {
+            "text": text,
+            "language_code": language_code,
+            "speaker": speaker,
+            "pace": pace,
+            "model": model,
+            "output_audio_codec": "wav",
+        }
+        # Preprocessing exists only on v2. v3/v4 enable it automatically and
+        # reject the explicit flag.
+        if (model or "").strip().lower() == "bulbul:v2":
+            payload["enable_preprocessing"] = True
+        return payload
 
     @staticmethod
     def _sarvam_code(code: str, default: str = "en-IN") -> str:
