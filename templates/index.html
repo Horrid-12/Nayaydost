@@ -13,16 +13,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/styles.css?v=3">
-  <script src="/static/js/app.js?v=2" defer></script>
+  <script>
+    (function () {
+      var p = window.location.pathname.replace(/\/+$/, "") || "/";
+      var h = window.location.hash.toLowerCase();
+      var page = (p === "/guide" || h === "#guide") ? "guide" : ((p === "/legal-aid" || h === "#legal-aid") ? "legal-aid" : "workspace");
+      document.documentElement.setAttribute("data-page", page);
+    })();
+  </script>
+  <script src="/static/js/app.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the main content</a>
-  <div class="page-grain" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="NyayaDost home">
-        <span class="brand-seal" aria-hidden="true">⚖</span>
+        <span class="brand-seal" aria-hidden="true">ND</span>
         <span class="brand-text">
           <span class="brand-name">NyayaDost</span>
           <span class="brand-native">न्यायदोस्त</span>
@@ -30,16 +37,16 @@
       </a>
 
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#workspace">Explain a notice</a>
-        <a href="#guide">NyayaGuide</a>
-        <a href="#legal-aid">Legal Aid</a>
+        <a href="/" data-nav="workspace">Explain a notice</a>
+        <a href="/guide" data-nav="guide">NyayaGuide</a>
+        <a href="/legal-aid" data-nav="legal-aid">Legal Aid</a>
       </nav>
 
       <div class="header-actions">
         <span class="mode-chip" id="mode-chip" hidden></span>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-          <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+          <span class="theme-icon theme-icon-sun" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="8" cy="8" r="3.2" fill="currentColor" stroke="none"/><path d="M8 1.2v1.8M8 13v1.8M1.2 8H3M13 8h1.8M3.05 3.05l1.27 1.27M11.68 11.68l1.27 1.27M12.95 3.05l-1.27 1.27M4.32 11.68l-1.27 1.27"/></svg></span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" width="13" height="13" fill="currentColor"><path d="M9.5 2.2A6 6 0 1 0 13.8 6.5 4.7 4.7 0 0 1 9.5 2.2z"/></svg></span>
           <span class="theme-knob" aria-hidden="true"></span>
         </button>
       </div>
@@ -66,7 +73,6 @@
         <div class="seal" aria-hidden="true">
           <span class="seal-ring"></span>
           <span class="seal-center">
-            <span class="seal-scales">⚖</span>
             <span class="seal-title">NYAYA DOST</span>
             <span class="seal-sub">PLAIN LANGUAGE · INDIA</span>
           </span>
@@ -118,7 +124,6 @@
           </div>
           <div class="tab-panel" id="tab-upload" role="tabpanel">
             <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose or drop a PDF notice">
-              <span class="dropzone-icon" aria-hidden="true">⇩</span>
               <strong>Drop a PDF here</strong>
               <span>or choose a file from your device</span>
               <span class="dropzone-hint">Text-based PDFs only · up to <span id="upload-limit">10</span> MB</span>
@@ -172,10 +177,9 @@
 
           <div class="input-actions">
             <button type="button" class="button primary" id="analyze-button" disabled>
-              <span class="button-stamp" aria-hidden="true">⚖</span>
               Explain this notice
             </button>
-            <p class="privacy-note"><span aria-hidden="true">▣</span> Processed in memory. Never stored.</p>
+            <p class="privacy-note">Processed in memory. Never stored.</p>
           </div>
           <div class="inline-alert" id="input-error" role="alert" hidden></div>
         </section>
@@ -187,7 +191,7 @@
           </div>
 
           <div class="processing" id="processing" hidden aria-live="polite">
-            <div class="processing-seal" aria-hidden="true"><span>⚖</span></div>
+            <div class="processing-seal" aria-hidden="true"></div>
             <p class="processing-title">Reading the notice carefully</p>
             <ol class="processing-stages" id="processing-stages">
               <li data-stage="parse"><span class="stage-mark" aria-hidden="true"></span><div><strong>Parsing clauses</strong><p>Finding the sender, dates, amount, and legal sections.</p></div></li>
@@ -198,15 +202,15 @@
 
           <div class="empty-state" id="empty-state">
             <div class="empty-state-intro">
-              <div class="empty-seal" aria-hidden="true">⚖</div>
+              <div class="empty-seal" aria-hidden="true">§</div>
               <p class="empty-kicker">Nothing to explain yet</p>
               <h4>The notice goes in. A clear plan comes out.</h4>
               <p class="empty-copy">You will see a plain-language summary, a countdown to every deadline, a printable checklist, a glossary, and a reply draft.</p>
             </div>
             <ul class="empty-list">
-              <li><span aria-hidden="true">📌</span> What the notice actually means</li>
-              <li><span aria-hidden="true">⏳</span> The date that matters, in plain numbers</li>
-              <li><span aria-hidden="true">✅</span> The next step, in order</li>
+              <li>What the notice actually means</li>
+              <li>The date that matters, in plain numbers</li>
+              <li>The next step, in order</li>
             </ul>
           </div>
 
@@ -230,12 +234,12 @@
 
             <div class="result-tab-panel" id="tab-breakdown" role="tabpanel">
               <article class="card summary-card">
-                <div class="card-kicker"><span aria-hidden="true">📌</span> <span id="summary-label">What This Notice Means</span></div>
+                <div class="card-kicker"><span id="summary-label">What This Notice Means</span></div>
                 <h5 id="summary-title">Summary</h5>
                 <p class="summary-body" id="summary-body"></p>
                 <div class="summary-actions">
-                  <button type="button" class="button ghost small" id="speak-summary"><span aria-hidden="true">◉</span> Read aloud</button>
-                  <button type="button" class="button ghost small" id="copy-summary"><span aria-hidden="true">⧉</span> Copy</button>
+                  <button type="button" class="button ghost small" id="speak-summary">Read aloud</button>
+                  <button type="button" class="button ghost small" id="copy-summary">Copy</button>
                 </div>
               </article>
 
@@ -244,7 +248,7 @@
               <section class="deadline-section" aria-labelledby="deadline-title">
                 <div class="card-heading">
                   <div>
-                    <p class="card-kicker"><span aria-hidden="true">⏳</span> <span id="deadline-label">Critical Deadlines</span></p>
+                    <p class="card-kicker"><span id="deadline-label">Critical Deadlines</span></p>
                     <h5 id="deadline-title">The dates that matter</h5>
                   </div>
                   <p class="card-note">Counted from today in India Standard Time.</p>
@@ -255,12 +259,12 @@
               <section class="card steps-card" aria-labelledby="steps-title">
                 <div class="card-heading">
                   <div>
-                    <p class="card-kicker"><span aria-hidden="true">✅</span> <span id="steps-label">Immediate Next Steps</span></p>
+                    <p class="card-kicker"><span id="steps-label">Immediate Next Steps</span></p>
                     <h5 id="steps-title">Your checklist</h5>
                   </div>
                   <div class="steps-actions">
-                    <button type="button" class="button tiny" id="print-button"><span aria-hidden="true">⎙</span> Print</button>
-                    <button type="button" class="button tiny" id="share-button"><span aria-hidden="true">↗</span> Share</button>
+                    <button type="button" class="button tiny" id="print-button">Print</button>
+                    <button type="button" class="button tiny" id="share-button">Share</button>
                   </div>
                 </div>
                 <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="steps-progress-bar"></span></div>
@@ -271,13 +275,13 @@
               <section class="card audio-card" id="audio-card" aria-labelledby="audio-title">
                 <div class="card-heading">
                   <div>
-                    <p class="card-kicker"><span aria-hidden="true">◉</span> <span id="audio-label">Listen to this explanation</span></p>
+                    <p class="card-kicker"><span id="audio-label">Listen to this explanation</span></p>
                     <h5 id="audio-title">Audio in your language</h5>
                   </div>
                   <button type="button" class="button ghost small" id="audio-load">Load audio</button>
                 </div>
                 <div class="audio-player" id="audio-player" hidden>
-                  <button type="button" class="play-button" id="audio-play" aria-label="Play audio">▶</button>
+                  <button type="button" class="play-button" id="audio-play" aria-label="Play audio">Play</button>
                   <div class="wave-wrap">
                     <canvas id="waveform" width="720" height="64" aria-hidden="true"></canvas>
                     <div class="wave-progress" id="wave-progress"></div>
@@ -299,11 +303,11 @@
             <div class="result-tab-panel" id="tab-original" role="tabpanel">
               <div class="original-grid">
                 <section class="card">
-                  <div class="card-kicker"><span aria-hidden="true">▤</span> <span id="original-label">Original Legalese</span></div>
+                  <div class="card-kicker"><span id="original-label">Original Legalese</span></div>
                   <pre class="original-text" id="original-text"></pre>
                 </section>
                 <section class="card translation-card">
-                  <div class="card-kicker"><span aria-hidden="true">⇄</span> Vernacular translation</div>
+                  <div class="card-kicker">Vernacular translation</div>
                   <p class="field-hint">Translate the original wording with Sarvam Mayura. In offline mode, key legal terms are replaced from a phrasebook and clearly labelled.</p>
                   <button type="button" class="button ghost small" id="translate-button">Translate the original</button>
                   <div class="inline-alert" id="translation-warning" role="status" hidden></div>
@@ -314,7 +318,7 @@
 
             <div class="result-tab-panel" id="tab-glossary" role="tabpanel">
               <section class="card">
-                <div class="card-kicker"><span aria-hidden="true">✎</span> <span id="glossary-label">Legal Terms, Decoded</span></div>
+                <div class="card-kicker"><span id="glossary-label">Legal Terms, Decoded</span></div>
                 <h5>Every term that could slow you down</h5>
                 <dl class="glossary-list" id="glossary-list"></dl>
               </section>
@@ -322,7 +326,7 @@
 
             <div class="result-tab-panel" id="tab-reply" role="tabpanel">
               <section class="card reply-card">
-                <div class="card-kicker"><span aria-hidden="true">✉</span> <span id="reply-label">Reply Draft</span></div>
+                <div class="card-kicker"><span id="reply-label">Reply Draft</span></div>
                 <h5 id="reply-subject">Reply to the notice</h5>
                 <p class="reply-note" id="reply-note"></p>
                 <pre class="reply-template" id="reply-template"></pre>
@@ -482,30 +486,30 @@
     </section>
 
     <section class="trust-strip" aria-label="Privacy and safety commitments">
-      <div><span aria-hidden="true">▣</span><strong>In memory only</strong><p>Uploads are parsed and discarded. Nothing is written to disk.</p></div>
-      <div><span aria-hidden="true">⌂</span><strong>Works offline</strong><p>Without a Sarvam key, the demo uses labelled local fallbacks.</p></div>
-      <div><span aria-hidden="true">⚖</span><strong>Not a law firm</strong><p>Plain-language help, not legal advice. Verify with an advocate or DLSA.</p></div>
+      <div><strong>In memory only</strong><p>Uploads are parsed and discarded. Nothing is written to disk.</p></div>
+      <div><strong>Works offline</strong><p>Without a Sarvam key, the demo uses labelled local fallbacks.</p></div>
+      <div><strong>Not a law firm</strong><p>Plain-language help, not legal advice. Verify with an advocate or DLSA.</p></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-seal small" aria-hidden="true">⚖</span>
+        <span class="brand-seal small" aria-hidden="true">ND</span>
         <div>
           <strong>NyayaDost</strong>
           <p>न्याय सबके लिए, भाषा में समझने योग्य।</p>
         </div>
       </div>
       <div class="footer-links">
-        <a href="#workspace">Explain a notice</a>
-        <a href="#guide">NyayaGuide</a>
-        <a href="#legal-aid">Legal Aid Finder</a>
+        <a href="/" data-nav="workspace">Explain a notice</a>
+        <a href="/guide" data-nav="guide">NyayaGuide</a>
+        <a href="/legal-aid" data-nav="legal-aid">Legal Aid Finder</a>
         <a href="/api/docs">API</a>
       </div>
       <div class="footer-meta">
         <p id="footer-mode">Offline demo</p>
-        <p>Built for the Sarvam AI hackathon · <span id="footer-version">v1.0.0</span></p>
+        <p><span id="footer-version">v1.0.0</span></p>
         <p class="footer-disclaimer">NyayaDost explains documents in plain language. It is not a law firm and does not give legal advice. Verify important steps with a licensed advocate or your District Legal Services Authority.</p>
       </div>
     </div>

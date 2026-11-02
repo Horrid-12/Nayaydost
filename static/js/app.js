@@ -422,7 +422,6 @@ function languageName(code) {
 }
 
 
-
 async function loadBootstrap() {
   try {
     const data = await api("/api/bootstrap?language=" + encodeURIComponent(state.language));
@@ -2016,6 +2015,101 @@ async function changeLanguage() {
    Init
    -------------------------------------------------------------------------- */
 
+/* --------------------------------------------------------------------------
+   Navigation & Multi-page views
+   -------------------------------------------------------------------------- */
+
+/**
+ * Switch top-level view between workspace, guide, and legal-aid.
+ * @param {string} page
+ * @param {boolean} [updateHistory=true]
+ */
+function setPage(page, updateHistory = true) {
+  const validPages = ["workspace", "guide", "legal-aid"];
+  if (!validPages.includes(page)) {
+    page = "workspace";
+  }
+
+  document.documentElement.setAttribute("data-page", page);
+
+  const navLinks = document.querySelectorAll("[data-nav]");
+  navLinks.forEach((link) => {
+    const target = link.getAttribute("data-nav");
+    if (target === page) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("is-active");
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  let path = "/";
+  let title = "NyayaDost — Legal notices in plain language";
+  if (page === "guide") {
+    path = "/guide";
+    title = "NyayaGuide — The law, before you need a lawyer | NyayaDost";
+  } else if (page === "legal-aid") {
+    path = "/legal-aid";
+    title = "Legal Aid Finder — Free legal help | NyayaDost";
+  }
+
+  document.title = title;
+
+  if (updateHistory) {
+    if (window.location.pathname !== path) {
+      window.history.pushState({ page }, "", path);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
+function resolvePageFromUrl() {
+  const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+  const hash = window.location.hash.toLowerCase();
+  if (pathname === "/guide" || hash === "#guide") return "guide";
+  if (pathname === "/legal-aid" || hash === "#legal-aid") return "legal-aid";
+  return "workspace";
+}
+
+function bindNavigation() {
+  window.addEventListener("popstate", (e) => {
+    const page = (e.state && e.state.page) || resolvePageFromUrl();
+    setPage(page, false);
+  });
+
+  document.addEventListener("click", (e) => {
+    const target = /** @type {HTMLElement | null} */ (e.target);
+    const link = target ? /** @type {HTMLAnchorElement | null} */ (target.closest("a")) : null;
+    if (!link) return;
+
+    const navAttr = link.getAttribute("data-nav");
+    const href = link.getAttribute("href") || "";
+
+    let page = navAttr;
+    if (!page) {
+      if (href === "/guide" || href === "#guide") page = "guide";
+      else if (href === "/legal-aid" || href === "#legal-aid") page = "legal-aid";
+      else if (href === "/" || href === "#workspace") page = "workspace";
+    }
+
+    if (page) {
+      e.preventDefault();
+      setPage(page, true);
+    }
+  });
+
+  const brand = document.querySelector(".brand");
+  if (brand) {
+    brand.addEventListener("click", (e) => {
+      e.preventDefault();
+      setPage("workspace", true);
+    });
+  }
+
+  setPage(resolvePageFromUrl(), false);
+}
+
 function bindGlobalErrors() {
   window.addEventListener("offline", () => {
     showToast("You are offline. Pasted-text features need the local server to be running.", "error");
@@ -2027,6 +2121,7 @@ function bindGlobalErrors() {
 
 async function init() {
   bindTheme();
+  bindNavigation();
   bindInput();
   bindUpload();
   bindDictation();
