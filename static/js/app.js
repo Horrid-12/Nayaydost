@@ -12,9 +12,8 @@
 
 /** @typedef {{ code: string, english_name: string, native_name: string, tts_lang: string }} LanguageOption */
 /** @typedef {{ id: string, label: string, label_en: string, statute: string, severity: string }} NoticeTypeOption */
-/** @typedef {{ id: string, title: string, description: string, notice_type: string, text: string }} SampleNotice */
 /** @typedef {{ max_upload_mb: number, max_text_chars: number, max_tts_chars: number, max_pdf_pages: number }} AppLimits */
-/** @typedef {{ version: string, mode: string, sarvam_configured: boolean, languages: LanguageOption[], notice_types: NoticeTypeOption[], samples: SampleNotice[], limits: AppLimits, generated_at: string }} BootstrapData */
+/** @typedef {{ version: string, mode: string, sarvam_configured: boolean, languages: LanguageOption[], notice_types: NoticeTypeOption[], limits: AppLimits, generated_at: string }} BootstrapData */
 
 const STORAGE = {
   theme: "nyayadost.theme",
@@ -399,7 +398,6 @@ function applyBootstrap(data) {
   if (!guideTypeKnown && data.notice_types.length) state.guideType = data.notice_types[0].id;
   populateSelect(guideType, noticeOptions, state.guideType);
 
-  renderSamples();
   updateAnalyzeState();
 }
 
@@ -423,40 +421,7 @@ function languageName(code) {
   return found ? found.native_name : code;
 }
 
-function renderSamples() {
-  const list = byId("sample-list");
-  list.textContent = "";
-  if (!state.bootstrap || !state.bootstrap.samples.length) {
-    const note = el("p", "field-hint", "Samples are unavailable right now. Paste your notice instead.");
-    list.appendChild(note);
-    return;
-  }
 
-  for (const sample of state.bootstrap.samples) {
-    const card = el("div", "sample-card");
-    const type = el("span", "sample-type", noticeLabel(sample.notice_type));
-    const title = el("p", "sample-title", sample.title);
-    const description = el("p", "sample-desc", sample.description);
-    const button = el("button", "button tiny sample-load", "Load");
-    button.setAttribute("type", "button");
-    button.addEventListener("click", () => {
-      const textarea = textareaById("notice-text");
-      textarea.value = sample.text;
-      updateCharCount();
-      setInputMode("text");
-      updateAnalyzeState();
-      clearInputError();
-      textarea.focus();
-      textarea.scrollIntoView({ behavior: "smooth", block: "center" });
-      showToast("Sample loaded. Press “Explain this notice”.", "success");
-    });
-    card.appendChild(type);
-    card.appendChild(title);
-    card.appendChild(description);
-    card.appendChild(button);
-    list.appendChild(card);
-  }
-}
 
 async function loadBootstrap() {
   try {
@@ -933,7 +898,7 @@ async function analyzeNotice() {
   if (text.length < 30) {
     showInputError(
       "Please add at least a few lines of the notice.",
-      "Paste the text, upload a PDF, or load a sample. Thirty characters is the minimum."
+      "Paste the text or upload a PDF. Thirty characters is the minimum."
     );
     showToast("Add the notice text first.", "error");
     return;

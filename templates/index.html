@@ -11,9 +11,9 @@
   <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/styles.css">
-  <script src="/static/js/app.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/styles.css?v=3">
+  <script src="/static/js/app.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the main content</a>
@@ -101,27 +101,22 @@
             <p id="language-help" class="field-hint">The explanation, deadlines, and checklist will appear in this language.</p>
           </div>
 
-          <div class="input-tabs" role="tablist" aria-label="How to add the notice">
-            <button type="button" class="input-tab is-active" id="tab-button-text" role="tab" aria-selected="true" aria-controls="tab-text" data-input-tab="text">Paste text</button>
-            <button type="button" class="input-tab" id="tab-button-upload" role="tab" aria-selected="false" aria-controls="tab-upload" data-input-tab="upload">Upload PDF</button>
-            <button type="button" class="input-tab" id="tab-button-dictate" role="tab" aria-selected="false" aria-controls="tab-dictate" data-input-tab="dictate">Dictate</button>
+          <div class="input-section-header">
+            <span class="input-section-label">Paste text</span>
           </div>
-
-          <div class="tab-panel" id="tab-text" role="tabpanel" aria-labelledby="tab-button-text">
+          <div class="tab-panel" id="tab-text" role="tabpanel">
             <label class="sr-only" for="notice-text">Paste the notice text</label>
-            <textarea id="notice-text" rows="12" spellcheck="true" placeholder="Paste the full notice here. Include the date, sender, amount, and the paragraph that asks you to pay or reply."></textarea>
+            <textarea id="notice-text" rows="8" spellcheck="true" placeholder="Paste the full notice here. Include the date, sender, amount, and the paragraph that asks you to pay or reply."></textarea>
             <div class="textarea-meta">
               <span id="char-count">0 characters</span>
               <button type="button" class="text-button" id="clear-text">Clear text</button>
             </div>
-
-            <div class="sample-block">
-              <p class="field-hint">No notice handy? Load a realistic sample to see how NyayaDost works.</p>
-              <div class="sample-list" id="sample-list" aria-live="polite"></div>
-            </div>
           </div>
 
-          <div class="tab-panel" id="tab-upload" role="tabpanel" aria-labelledby="tab-button-upload" hidden>
+          <div class="input-section-header">
+            <span class="input-section-label">Upload PDF</span>
+          </div>
+          <div class="tab-panel" id="tab-upload" role="tabpanel">
             <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose or drop a PDF notice">
               <span class="dropzone-icon" aria-hidden="true">⇩</span>
               <strong>Drop a PDF here</strong>
@@ -147,10 +142,13 @@
                 <a class="button tiny" id="pdf-open" href="#" target="_blank" rel="noopener">Open in new tab</a>
               </div>
             </div>
-            <p class="field-hint">Scanned image PDFs have no selectable text. If we cannot read yours, paste the text in the text tab.</p>
+            <p class="field-hint">Scanned image PDFs have no selectable text. Paste the text above instead.</p>
           </div>
 
-          <div class="tab-panel" id="tab-dictate" role="tabpanel" aria-labelledby="tab-button-dictate" hidden>
+          <div class="input-section-header">
+            <span class="input-section-label">Dictate</span>
+          </div>
+          <div class="tab-panel" id="tab-dictate" role="tabpanel">
             <div class="dictate-box">
               <button type="button" class="record-button" id="record-button" aria-pressed="false">
                 <span class="record-dot" aria-hidden="true"></span>
@@ -199,10 +197,12 @@
           </div>
 
           <div class="empty-state" id="empty-state">
-            <div class="empty-seal" aria-hidden="true">⚖</div>
-            <p class="empty-kicker">Nothing to explain yet</p>
-            <h4>The notice goes in. A clear plan comes out.</h4>
-            <p>You will see a plain-language summary, a countdown to every deadline, a printable checklist, a glossary, and a reply draft.</p>
+            <div class="empty-state-intro">
+              <div class="empty-seal" aria-hidden="true">⚖</div>
+              <p class="empty-kicker">Nothing to explain yet</p>
+              <h4>The notice goes in. A clear plan comes out.</h4>
+              <p class="empty-copy">You will see a plain-language summary, a countdown to every deadline, a printable checklist, a glossary, and a reply draft.</p>
+            </div>
             <ul class="empty-list">
               <li><span aria-hidden="true">📌</span> What the notice actually means</li>
               <li><span aria-hidden="true">⏳</span> The date that matters, in plain numbers</li>
@@ -228,14 +228,7 @@
 
             <div class="result-warning" id="result-warning" hidden></div>
 
-            <div class="result-tabs" role="tablist" aria-label="Result sections">
-              <button type="button" class="result-tab is-active" role="tab" aria-selected="true" aria-controls="tab-breakdown" id="result-tab-button-breakdown" data-result-tab="breakdown">Citizen Breakdown</button>
-              <button type="button" class="result-tab" role="tab" aria-selected="false" aria-controls="tab-original" id="result-tab-button-original" data-result-tab="original">Original Legalese</button>
-              <button type="button" class="result-tab" role="tab" aria-selected="false" aria-controls="tab-glossary" id="result-tab-button-glossary" data-result-tab="glossary">Glossary</button>
-              <button type="button" class="result-tab" role="tab" aria-selected="false" aria-controls="tab-reply" id="result-tab-button-reply" data-result-tab="reply">Reply Draft</button>
-            </div>
-
-            <div class="result-tab-panel" id="tab-breakdown" role="tabpanel" aria-labelledby="result-tab-button-breakdown">
+            <div class="result-tab-panel" id="tab-breakdown" role="tabpanel">
               <article class="card summary-card">
                 <div class="card-kicker"><span aria-hidden="true">📌</span> <span id="summary-label">What This Notice Means</span></div>
                 <h5 id="summary-title">Summary</h5>
@@ -303,7 +296,7 @@
               </section>
             </div>
 
-            <div class="result-tab-panel" id="tab-original" role="tabpanel" aria-labelledby="result-tab-button-original" hidden>
+            <div class="result-tab-panel" id="tab-original" role="tabpanel">
               <div class="original-grid">
                 <section class="card">
                   <div class="card-kicker"><span aria-hidden="true">▤</span> <span id="original-label">Original Legalese</span></div>
@@ -319,7 +312,7 @@
               </div>
             </div>
 
-            <div class="result-tab-panel" id="tab-glossary" role="tabpanel" aria-labelledby="result-tab-button-glossary" hidden>
+            <div class="result-tab-panel" id="tab-glossary" role="tabpanel">
               <section class="card">
                 <div class="card-kicker"><span aria-hidden="true">✎</span> <span id="glossary-label">Legal Terms, Decoded</span></div>
                 <h5>Every term that could slow you down</h5>
@@ -327,7 +320,7 @@
               </section>
             </div>
 
-            <div class="result-tab-panel" id="tab-reply" role="tabpanel" aria-labelledby="result-tab-button-reply" hidden>
+            <div class="result-tab-panel" id="tab-reply" role="tabpanel">
               <section class="card reply-card">
                 <div class="card-kicker"><span aria-hidden="true">✉</span> <span id="reply-label">Reply Draft</span></div>
                 <h5 id="reply-subject">Reply to the notice</h5>
