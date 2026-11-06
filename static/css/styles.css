@@ -1026,6 +1026,11 @@ textarea::placeholder {
   border-top: 1px solid var(--rule);
 }
 
+.pdf-preview-hint {
+  margin: 0;
+  padding: 0 13px 11px;
+}
+
 .dictate-box {
   display: flex;
   flex-direction: column;

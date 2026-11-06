@@ -173,6 +173,14 @@ def run_checks(base_url: str) -> int:
         assert_header(response, "X-Frame-Options", "DENY")
         assert_header(response, "Content-Security-Policy", "default-src 'self'")
         assert_header(response, "Content-Security-Policy", "frame-src 'self' blob:")
+        # Blob PDFs inherit the CSP. "none" makes Safari block the PDF preview,
+        # while "self" still prevents other sites from framing the app.
+        assert_header(response, "Content-Security-Policy", "frame-ancestors 'self'")
+        csp = response.headers.get("Content-Security-Policy", "")
+        if "frame-ancestors 'none'" in csp:
+            raise AssertionError(
+                "frame-ancestors 'none' blocks the blob: PDF preview in WebKit"
+            )
         if "NyayaDost" not in response.text:
             raise AssertionError("home page does not contain the NyayaDost brand")
         if not response.headers.get("X-Request-ID", "").startswith("req_"):

@@ -132,7 +132,10 @@ async def request_context_and_security(request: Request, call_next: Any) -> Resp
         "object-src 'none'; "
         "base-uri 'self'; "
         "form-action 'self'; "
-        "frame-ancestors 'none'"
+        # The PDF preview is a blob: document. Browsers inherit this CSP,
+        # including frame-ancestors, into that blob. "none" therefore blocks
+        # the preview in WebKit/Safari; "self" still blocks foreign framing.
+        "frame-ancestors 'self'"
     )
     if request.url.path.startswith("/api/"):
         response.headers["Cache-Control"] = "no-store"
