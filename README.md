@@ -1,4 +1,4 @@
-# NyayaDost (न्यायदोस्त)
+# NyayayDost (न्यायदोस्त)
 
 **Legal notices, in language you actually speak.**
 
